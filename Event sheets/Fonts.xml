@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fonts</name>
+    <events>
+        <event-block any="1" sid="952905086125525">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="481819783923933" type="System" />
+                <condition id="-18" name="On created" sid="328512686018297" type="DefaultFont" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set character width" sid="187696958334084" type="DefaultFont">
+                    <param id="0" name="Character">&quot;#%&amp;MWmw~&quot;</param>
+                    <param id="1" name="Width">9</param>
+                </action>
+                <action id="5" name="Set character width" sid="989934502410063" type="DefaultFont">
+                    <param id="0" name="Character">&quot;$*+-./0123456789=?@ABCDEFGHIJKLNOPQRSTUVXYZabcdefghijklnopqrstuvxyz&quot;</param>
+                    <param id="1" name="Width">8</param>
+                </action>
+                <action id="5" name="Set character width" sid="816289231212580" type="DefaultFont">
+                    <param id="0" name="Character">&quot;&lt;&gt;{}&quot;</param>
+                    <param id="1" name="Width">7</param>
+                </action>
+                <action id="5" name="Set character width" sid="763303519086540" type="DefaultFont">
+                    <param id="0" name="Character">&quot;!()[]_&quot;</param>
+                    <param id="1" name="Width">6</param>
+                </action>
+                <action id="5" name="Set character width" sid="654014156691874" type="DefaultFont">
+                    <param id="0" name="Character">&quot;`&quot;</param>
+                    <param id="1" name="Width">5</param>
+                </action>
+                <action id="5" name="Set character width" sid="216416039481004" type="DefaultFont">
+                    <param id="0" name="Character">&quot;&apos;,:;|&quot;</param>
+                    <param id="1" name="Width">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="450810077388467">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

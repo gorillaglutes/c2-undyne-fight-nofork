@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Globals</name>
+    <events>
+        <variable constant="1" name="HEARTMODE_RED" sid="411767718715576" static="0" type="number">0</variable>
+        <variable constant="1" name="HEARTMODE_BLUE" sid="376974152729084" static="0" type="number">1</variable>
+        <variable constant="1" name="MODE_NORMAL" sid="580560528254117" static="0" type="number">0</variable>
+        <variable constant="1" name="MODE_ENDLESS" sid="603634185611291" static="0" type="number">1</variable>
+        <variable constant="1" name="MODE_SINGLE" sid="202440170920940" static="0" type="number">2</variable>
+        <variable constant="1" name="MODE_PRACTICE" sid="429178949837645" static="0" type="number">3</variable>
+        <variable constant="0" name="SimulatorMode" sid="930676495167436" static="0" type="number">0</variable>
+        <variable constant="0" name="EndlessStage" sid="773398113897397" static="0" type="number">0</variable>
+        <variable constant="0" name="PracticeTarget" sid="135346872731587" static="0" type="number">60</variable>
+        <variable constant="0" name="SingleAttack" sid="540325807450596" static="0" type="text"></variable>
+        <variable constant="0" name="Name" sid="927395286803954" static="0" type="text">Chara</variable>
+        <variable constant="0" name="HP" sid="311384284312900" static="0" type="number">60</variable>
+        <variable constant="0" name="MaxHP" sid="633951995579920" static="0" type="number">60</variable>
+        <variable constant="0" name="KR" sid="434385906383401" static="0" type="number">0</variable>
+        <variable constant="0" name="KR_T" sid="402742182501592" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>
