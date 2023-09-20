@@ -23,7 +23,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="0">
@@ -33,7 +33,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="0" path="object-folder/Fonts/" />
         <folder expanded="1" path="object-folder/Singletons/" />
-        <folder expanded="0" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/Enemies/" />
+        <folder expanded="1" path="object-folder/Enemies/Undyne/" />
+        <folder expanded="1" path="object-folder/Enemies/Sans/" />
         <folder expanded="0" path="object-folder/Attacks/" />
         <folder expanded="0" path="object-folder/BattleUI/" />
         <folder expanded="0" path="object-folder/TouchUI/" />
@@ -45,12 +47,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/VPad/" />
-        <folder expanded="1" path="animation-folder/SpeechBubble/" />
-        <folder expanded="1" path="animation-folder/SansBody/" />
-        <folder expanded="1" path="animation-folder/SansSweat/" />
+        <folder expanded="1" path="animation-folder/UndyneHair/" />
+        <folder expanded="1" path="animation-folder/UndyneHead/" />
+        <folder expanded="1" path="animation-folder/UndyneLeftArm/" />
+        <folder expanded="1" path="animation-folder/UndyneLegs/" />
+        <folder expanded="1" path="animation-folder/UndyneRightArm/" />
+        <folder expanded="1" path="animation-folder/UndyneTorso/" />
+        <folder expanded="1" path="animation-folder/UndyneWaist/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/SansHead/" />
+        <folder expanded="1" path="animation-folder/SansBody/" />
         <folder expanded="1" path="animation-folder/SansLegs/" />
+        <folder expanded="1" path="animation-folder/SansSweat/" />
         <folder expanded="1" path="animation-folder/SansTorso/" />
+        <folder expanded="1" path="animation-folder/SpeechBubble/" />
         <folder expanded="1" path="animation-folder/GasterBlaster/" />
         <folder expanded="1" path="animation-folder/MenuBoneBottom/" />
         <folder expanded="1" path="animation-folder/MenuBoneLeft/" />
