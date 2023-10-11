@@ -1496,6 +1496,7 @@
                         <RiseTime>0.4666</RiseTime>
                         <Rising>true</Rising>
                         <StabSpeed>275</StabSpeed>
+                        <audioPlayed>false</audioPlayed>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -496,6 +496,20 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="823528283678942">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="261129932323815" type="PlayerHeart">
+                                    <param id="0" name="Instance variable">Mode</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Move to layer" sid="281071827233152" type="DefaultFont">
+                                    <param id="0" name="Layer">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="4459952550089159">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="6476568399148247" type="MenuItem">

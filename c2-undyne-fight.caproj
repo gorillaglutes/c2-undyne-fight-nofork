@@ -1959,6 +1959,7 @@
                 <instance-variable name="RiseTime" sid="276535513995741" type="number" />
                 <instance-variable name="Rising" sid="712194332368711" type="boolean" />
                 <instance-variable name="StabSpeed" sid="874861849687123" type="number" />
+                <instance-variable name="audioPlayed" sid="469014127944258" type="boolean" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797361171318319" speed="5">
@@ -2257,6 +2258,7 @@
         <file name="PlayerHeal.ogg" />
         <file name="GasterBlast2.ogg" />
         <file name="UndyneSpeak.ogg" />
+        <file name="stabbingspear.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="mus_zz_megalovania.ogg" />

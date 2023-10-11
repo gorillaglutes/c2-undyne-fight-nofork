@@ -13,12 +13,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="7">MainMenu</layout>
         <layout order="2">System</layout>
         <layout order="11">BattleScreen</layout>
-        <event-sheet order="0">Battle</event-sheet>
+        <event-sheet active="1" order="0">Battle</event-sheet>
         <event-sheet order="1">Globals</event-sheet>
         <event-sheet order="4">RPGText</event-sheet>
         <event-sheet order="5">AttackLoader</event-sheet>
         <event-sheet order="6">Timeline</event-sheet>
-        <event-sheet active="1" order="8">Menus</event-sheet>
+        <event-sheet order="8">Menus</event-sheet>
         <event-sheet order="9">Fonts</event-sheet>
         <event-sheet order="10">MainMenu</event-sheet>
     </open-tabs>
@@ -55,7 +55,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/VPad/" />

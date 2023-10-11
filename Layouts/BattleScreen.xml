@@ -880,7 +880,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Mode>0</Mode>
+                        <Mode>-1</Mode>
                         <Slammed>false</Slammed>
                         <SlamDamage>false</SlamDamage>
                         <T>0</T>

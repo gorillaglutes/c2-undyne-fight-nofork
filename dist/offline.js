@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1696998166,
+	"version": 1697035072,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -108,6 +108,7 @@
 		"media/playerheal.ogg",
 		"media/gasterblast2.ogg",
 		"media/undynespeak.ogg",
+		"media/stabbingspear.ogg",
 		"media/mus_zz_megalovania.ogg",
 		"media/mus_zz_battleagainstatruehero.ogg",
 		"icon-16.png",
