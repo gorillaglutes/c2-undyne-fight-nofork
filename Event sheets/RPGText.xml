@@ -290,50 +290,50 @@
                             <param id="0" name="Y">UndyneLegs.Y - 224</param>
                         </action>
                         <action id="-3" name="Create object" sid="847457127208448" type="System">
-                            <param id="0" name="Object to create">UndyneFont</param>
+                            <param id="0" name="Object to create">DefaultFont</param>
                             <param id="1" name="Layer">&quot;Enemies&quot;</param>
                             <param id="2" name="X">0</param>
                             <param id="3" name="Y">0</param>
                         </action>
-                        <action id="-1" name="Set X" sid="842720666113258" type="UndyneFont">
+                        <action id="-1" name="Set X" sid="842720666113258" type="DefaultFont">
                             <param id="0" name="X">SpeechBubble.X + 32</param>
                         </action>
-                        <action id="-2" name="Set Y" sid="132050228011607" type="UndyneFont">
+                        <action id="-2" name="Set Y" sid="132050228011607" type="DefaultFont">
                             <param id="0" name="Y">SpeechBubble.Y + 16</param>
                         </action>
-                        <action id="-5" name="Set width" sid="760606405965411" type="UndyneFont">
+                        <action id="-5" name="Set width" sid="760606405965411" type="DefaultFont">
                             <param id="0" name="Width">256</param>
                         </action>
-                        <action id="-6" name="Set height" sid="422340838154930" type="UndyneFont">
+                        <action id="-6" name="Set height" sid="422340838154930" type="DefaultFont">
                             <param id="0" name="Height">64</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="174982288917127" type="UndyneFont">
+                        <action id="-28" name="Set effect parameter" sid="174982288917127" type="DefaultFont">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">0</param>
                             <param id="2" name="Value">0</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="294496002844584" type="UndyneFont">
+                        <action id="-28" name="Set effect parameter" sid="294496002844584" type="DefaultFont">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">1</param>
                             <param id="2" name="Value">0</param>
                         </action>
-                        <action id="-28" name="Set effect parameter" sid="937084927269474" type="UndyneFont">
+                        <action id="-28" name="Set effect parameter" sid="937084927269474" type="DefaultFont">
                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                             <param id="1" name="Parameter index">2</param>
                             <param id="2" name="Value">0</param>
                         </action>
-                        <action id="0" name="Set text" sid="458289625856019" type="UndyneFont">
+                        <action id="0" name="Set text" sid="458289625856019" type="DefaultFont">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="597283863794219" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="597283863794219" type="DefaultFont">
                             <param id="0" name="Instance variable">Voice</param>
                             <param id="1" name="Value">&quot;UndyneSpeak&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="973044519680978" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="973044519680978" type="DefaultFont">
                             <param id="0" name="Instance variable">FullText</param>
                             <param id="1" name="Value">Function.Param(0)</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="706913713216370" type="UndyneFont">
+                        <action id="-13" name="Set boolean" sid="706913713216370" type="DefaultFont">
                             <param id="0" name="Instance variable">Interactive</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -352,7 +352,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="435515530601869" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="435515530601869" type="DefaultFont">
                                     <param id="0" name="Instance variable">EndFunc</param>
                                     <param id="1" name="Value">&quot;EndUndyneText&quot;</param>
                                 </action>
@@ -367,7 +367,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="378513194156132" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="378513194156132" type="DefaultFont">
                                     <param id="0" name="Instance variable">EndFunc</param>
                                     <param id="1" name="Value">Function.Param(1)</param>
                                 </action>

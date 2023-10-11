@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1696994730,
+	"version": 1696998166,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -61,7 +61,7 @@
 		"images/rarrowl-sheet0.png",
 		"images/battlefont.png",
 		"images/sansfont.png",
-		"images/undynefont.png",
+		"images/defaultfont.png",
 		"images/damagefont.png",
 		"images/spritefont.png",
 		"images/undynefont2.png",

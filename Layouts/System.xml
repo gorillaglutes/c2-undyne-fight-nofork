@@ -625,7 +625,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UndyneFont" uid="36">
+                <instance type="DefaultFont" uid="36">
                     <properties>
                         <character-width>10</character-width>
                         <character-height>16</character-height>
@@ -1051,7 +1051,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="UndyneFont" uid="66">
+                <instance type="DefaultFont" uid="66">
                     <properties>
                         <character-width>10</character-width>
                         <character-height>16</character-height>

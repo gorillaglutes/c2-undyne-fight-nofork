@@ -1733,7 +1733,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="4871016202786797" type="MenuItem" />
-                                <action id="-9" name="Destroy" sid="3501512135482582" type="UndyneFont" />
+                                <action id="-9" name="Destroy" sid="3501512135482582" type="DefaultFont" />
                                 <action id="0" name="Call function" sid="2013543461201569" type="Function">
                                     <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;&quot;</param>
@@ -1743,26 +1743,26 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="5066171669311235" type="System">
-                                    <param id="0" name="Object to create">UndyneFont</param>
+                                    <param id="0" name="Object to create">DefaultFont</param>
                                     <param id="1" name="Layer">&quot;CombatZone&quot;</param>
                                     <param id="2" name="X">48</param>
                                     <param id="3" name="Y">272</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="7869898738280204" type="UndyneFont">
+                                <action id="-7" name="Set size" sid="7869898738280204" type="DefaultFont">
                                     <param id="0" name="Width">544</param>
                                     <param id="1" name="Height">96</param>
                                 </action>
-                                <action id="2" name="Set scale" sid="6733110494252138" type="UndyneFont">
+                                <action id="2" name="Set scale" sid="6733110494252138" type="DefaultFont">
                                     <param id="0" name="Scale">2</param>
                                 </action>
-                                <action id="0" name="Set text" sid="6965892442098992" type="UndyneFont">
+                                <action id="0" name="Set text" sid="6965892442098992" type="DefaultFont">
                                     <param id="0" name="Text">&quot;&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="5835545420556264" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="5835545420556264" type="DefaultFont">
                                     <param id="0" name="Instance variable">FullText</param>
                                     <param id="1" name="Value">CombatZone.InfoText</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="555423261791026" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="555423261791026" type="DefaultFont">
                                     <param id="0" name="Instance variable">Name</param>
                                     <param id="1" name="Value">&quot;InfoText&quot;</param>
                                 </action>
@@ -1878,7 +1878,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="6880014801936653" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="7180918704272833" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="7180918704272833" type="DefaultFont" />
                         <action id="0" name="Call function" sid="8697772466055087" type="Function">
                             <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;MenuBattle&quot;</param>
@@ -1906,7 +1906,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="2505710701175432" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="2495747864607295" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="2495747864607295" type="DefaultFont" />
                         <action id="-9" name="Set value" sid="1227979589177662" type="System">
                             <param id="0" name="Variable">MenuState</param>
                             <param id="1" name="Value">0</param>
@@ -1979,7 +1979,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="937714564688928" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="189818432562999" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="189818432562999" type="DefaultFont" />
                         <action id="-9" name="Set value" sid="243596809313799" type="System">
                             <param id="0" name="Variable">MenuState</param>
                             <param id="1" name="Value">0</param>
@@ -2831,7 +2831,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="7055489516107744" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="5911009930611075" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="5911009930611075" type="DefaultFont" />
                         <action id="0" name="Call function" sid="6408759864074876" type="Function">
                             <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;MenuBattle&quot;</param>
@@ -2854,7 +2854,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="3469618219357269" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="6879063204349359" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="6879063204349359" type="DefaultFont" />
                         <action id="0" name="Call function" sid="9898822667382134" type="Function">
                             <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;MenuAct&quot;</param>
@@ -2877,40 +2877,40 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="9655043778862738" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="9438899527612639" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="9438899527612639" type="DefaultFont" />
                         <action id="-9" name="Set value" sid="2620726080634939" type="System">
                             <param id="0" name="Variable">MenuState</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-3" name="Create object" sid="2662309208083313" type="System">
-                            <param id="0" name="Object to create">UndyneFont</param>
+                            <param id="0" name="Object to create">DefaultFont</param>
                             <param id="1" name="Layer">&quot;CombatZone&quot;</param>
                             <param id="2" name="X">48</param>
                             <param id="3" name="Y">272</param>
                         </action>
-                        <action id="-7" name="Set size" sid="7750985060116913" type="UndyneFont">
+                        <action id="-7" name="Set size" sid="7750985060116913" type="DefaultFont">
                             <param id="0" name="Width">544</param>
                             <param id="1" name="Height">96</param>
                         </action>
-                        <action id="2" name="Set scale" sid="114711987025923" type="UndyneFont">
+                        <action id="2" name="Set scale" sid="114711987025923" type="DefaultFont">
                             <param id="0" name="Scale">2</param>
                         </action>
-                        <action id="0" name="Set text" sid="4205585603188199" type="UndyneFont">
+                        <action id="0" name="Set text" sid="4205585603188199" type="DefaultFont">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="8302002307835332" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="8302002307835332" type="DefaultFont">
                             <param id="0" name="Instance variable">FullText</param>
                             <param id="1" name="Value">&quot;* UNDYNE THE UNDYING 99 ATK 99 DEF&quot; &amp; newline &amp; &quot;* Heroine reformed her own&quot; &amp; newline &amp; &quot;  DETERMINATION to save Earth.&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7783602027376122" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="7783602027376122" type="DefaultFont">
                             <param id="0" name="Instance variable">Name</param>
                             <param id="1" name="Value">&quot;InfoText&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7245588627868631" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="7245588627868631" type="DefaultFont">
                             <param id="0" name="Instance variable">EndFunc</param>
                             <param id="1" name="Value">&quot;StartAttack&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="695507833767016" type="UndyneFont">
+                        <action id="-13" name="Set boolean" sid="695507833767016" type="DefaultFont">
                             <param id="0" name="Instance variable">Interactive</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -2928,7 +2928,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="3340722237681074" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="3340722237681074" type="DefaultFont">
                                     <param id="0" name="Instance variable">EndFunc</param>
                                     <param id="1" name="Value">&quot;MenuCheckSans2&quot;</param>
                                 </action>
@@ -2944,34 +2944,34 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="9921004734970456" type="System">
-                            <param id="0" name="Object to create">UndyneFont</param>
+                            <param id="0" name="Object to create">DefaultFont</param>
                             <param id="1" name="Layer">&quot;CombatZone&quot;</param>
                             <param id="2" name="X">48</param>
                             <param id="3" name="Y">272</param>
                         </action>
-                        <action id="-7" name="Set size" sid="1852508439781489" type="UndyneFont">
+                        <action id="-7" name="Set size" sid="1852508439781489" type="DefaultFont">
                             <param id="0" name="Width">544</param>
                             <param id="1" name="Height">96</param>
                         </action>
-                        <action id="2" name="Set scale" sid="4438216182801967" type="UndyneFont">
+                        <action id="2" name="Set scale" sid="4438216182801967" type="DefaultFont">
                             <param id="0" name="Scale">2</param>
                         </action>
-                        <action id="0" name="Set text" sid="9414362141358894" type="UndyneFont">
+                        <action id="0" name="Set text" sid="9414362141358894" type="DefaultFont">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7697488528991464" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="7697488528991464" type="DefaultFont">
                             <param id="0" name="Instance variable">FullText</param>
                             <param id="1" name="Value">&quot;* Can&apos;t keep dodging forever.&quot; &amp; newline &amp; &quot;* Keep attacking.&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="1065982881486434" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="1065982881486434" type="DefaultFont">
                             <param id="0" name="Instance variable">Name</param>
                             <param id="1" name="Value">&quot;InfoText&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7370334323802911" type="UndyneFont">
+                        <action id="-10" name="Set value" sid="7370334323802911" type="DefaultFont">
                             <param id="0" name="Instance variable">EndFunc</param>
                             <param id="1" name="Value">&quot;StartAttack&quot;</param>
                         </action>
-                        <action id="-13" name="Set boolean" sid="1593059177039637" type="UndyneFont">
+                        <action id="-13" name="Set boolean" sid="1593059177039637" type="DefaultFont">
                             <param id="0" name="Instance variable">Interactive</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -3013,7 +3013,7 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="458686589538686" type="MenuItem" />
-                                <action id="-9" name="Destroy" sid="3019807917076695" type="UndyneFont" />
+                                <action id="-9" name="Destroy" sid="3019807917076695" type="DefaultFont" />
                                 <action id="0" name="Call function" sid="5861341751558878" type="Function">
                                     <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                                     <param id="1" name="Parameter {n}">&quot;MenuBattle&quot;</param>
@@ -3023,22 +3023,22 @@
                                     <param id="1" name="Value">3</param>
                                 </action>
                                 <action id="-3" name="Create object" sid="6617115073471764" type="System">
-                                    <param id="0" name="Object to create">UndyneFont</param>
+                                    <param id="0" name="Object to create">DefaultFont</param>
                                     <param id="1" name="Layer">&quot;CombatZone&quot;</param>
                                     <param id="2" name="X">384</param>
                                     <param id="3" name="Y">336</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="2708739099675103" type="UndyneFont">
+                                <action id="-7" name="Set size" sid="2708739099675103" type="DefaultFont">
                                     <param id="0" name="Width">256</param>
                                     <param id="1" name="Height">32</param>
                                 </action>
-                                <action id="2" name="Set scale" sid="2397875778075625" type="UndyneFont">
+                                <action id="2" name="Set scale" sid="2397875778075625" type="DefaultFont">
                                     <param id="0" name="Scale">2</param>
                                 </action>
-                                <action id="0" name="Set text" sid="8274116410221162" type="UndyneFont">
+                                <action id="0" name="Set text" sid="8274116410221162" type="DefaultFont">
                                     <param id="0" name="Text">&quot;PAGE 1&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="6081845998597264" type="UndyneFont">
+                                <action id="-10" name="Set value" sid="6081845998597264" type="DefaultFont">
                                     <param id="0" name="Instance variable">Name</param>
                                     <param id="1" name="Value">&quot;Page&quot;</param>
                                 </action>
@@ -3118,7 +3118,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="4707307213438234" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="6142302341098431" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="6142302341098431" type="DefaultFont" />
                         <action id="-15" name="Set visible" sid="9465328367494064" type="PlayerHeart">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -3166,34 +3166,34 @@
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-3" name="Create object" sid="6714699484739134" type="System">
-                                            <param id="0" name="Object to create">UndyneFont</param>
+                                            <param id="0" name="Object to create">DefaultFont</param>
                                             <param id="1" name="Layer">&quot;CombatZone&quot;</param>
                                             <param id="2" name="X">48</param>
                                             <param id="3" name="Y">272</param>
                                         </action>
-                                        <action id="-7" name="Set size" sid="4176880778301639" type="UndyneFont">
+                                        <action id="-7" name="Set size" sid="4176880778301639" type="DefaultFont">
                                             <param id="0" name="Width">544</param>
                                             <param id="1" name="Height">96</param>
                                         </action>
-                                        <action id="2" name="Set scale" sid="8300686202119284" type="UndyneFont">
+                                        <action id="2" name="Set scale" sid="8300686202119284" type="DefaultFont">
                                             <param id="0" name="Scale">2</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="2783668341228197" type="UndyneFont">
+                                        <action id="0" name="Set text" sid="2783668341228197" type="DefaultFont">
                                             <param id="0" name="Text">&quot;&quot;</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="8525105579362746" type="UndyneFont">
+                                        <action id="-10" name="Set value" sid="8525105579362746" type="DefaultFont">
                                             <param id="0" name="Instance variable">FullText</param>
                                             <param id="1" name="Value">&quot;* You eat the &quot; &amp; ItemDB.At(ItemID, 2) &amp; &quot;.&quot; &amp;  newline &amp; &quot;* You recovered &quot; &amp; ItemDB.At(ItemID, 1) &amp; &quot; HP!&quot;</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="4979570658458923" type="UndyneFont">
+                                        <action id="-10" name="Set value" sid="4979570658458923" type="DefaultFont">
                                             <param id="0" name="Instance variable">Name</param>
                                             <param id="1" name="Value">&quot;InfoText&quot;</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="8843743648355896" type="UndyneFont">
+                                        <action id="-10" name="Set value" sid="8843743648355896" type="DefaultFont">
                                             <param id="0" name="Instance variable">EndFunc</param>
                                             <param id="1" name="Value">&quot;StartAttack&quot;</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="9149347642381097" type="UndyneFont">
+                                        <action id="-13" name="Set boolean" sid="9149347642381097" type="DefaultFont">
                                             <param id="0" name="Instance variable">Interactive</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
@@ -3215,7 +3215,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="8782380560236155" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="4537259580924028" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="4537259580924028" type="DefaultFont" />
                         <action id="0" name="Call function" sid="9517532625372192" type="Function">
                             <param id="0" name="Name">&quot;MenuBackAction&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;MenuBattle&quot;</param>
@@ -3238,7 +3238,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="6614875834860559" type="MenuItem" />
-                        <action id="-9" name="Destroy" sid="9250353767696502" type="UndyneFont" />
+                        <action id="-9" name="Destroy" sid="9250353767696502" type="DefaultFont" />
                         <action id="-9" name="Set value" sid="3259281702960783" type="System">
                             <param id="0" name="Variable">MenuState</param>
                             <param id="1" name="Value">0</param>
@@ -3328,14 +3328,14 @@
                         </event-block>
                         <event-block sid="3605994392407135">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2160425951955605" type="UndyneFont">
+                                <condition id="-7" name="Compare instance variable" sid="2160425951955605" type="DefaultFont">
                                     <param id="0" name="Instance variable">Name</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;Page&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="3088408406826475" type="UndyneFont">
+                                <action id="0" name="Set text" sid="3088408406826475" type="DefaultFont">
                                     <param id="0" name="Text">&quot;PAGE &quot; &amp; (floor(MenuStack.Back/4) + 1)</param>
                                 </action>
                             </actions>
@@ -7034,7 +7034,7 @@
                 <variable constant="0" name="slowmod" sid="304940192828285" static="1" type="number">1.5</variable>
                 <variable constant="1" name="opTimeEst" sid="201899524348502" static="1" type="number">0.96</variable>
                 <variable constant="1" name="OPRATE" sid="814332379799057" static="1" type="number">1125</variable>
-                <variable constant="0" name="shrink" sid="916252937204777" static="1" type="number">0.15</variable>
+                <variable constant="0" name="shrink" sid="916252937204777" static="1" type="number">0.1</variable>
                 <event-block sid="117693486579808">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="557244914875772" type="System" />

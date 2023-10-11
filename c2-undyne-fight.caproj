@@ -1,0 +1,2299 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>c2-undyne-fight</name>
+    <description>do you wanna have a bad time? &apos;cause if you visit this page... you are REALLY not going to like what happens next.</description>
+    <version>1.0.0.0</version>
+    <author>Jcw87</author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.jcw87.badtime</app-id>
+    <unique-id>3pln6vqtdnxgu</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="filechooser" version="1">File chooser</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>MainMenu</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Low quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Singletons">
+            <object-type name="Gamepad" sid="2737066360312475">
+                <plugin id="gamepad" />
+            </object-type>
+            <object-type name="Keyboard" sid="7004831969366137">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="VPad" sid="9768267065126338">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Up" sid="5138796745891601" type="number" />
+                    <instance-variable name="Down" sid="8231789435471491" type="number" />
+                    <instance-variable name="Left" sid="1260937868110365" type="number" />
+                    <instance-variable name="Right" sid="6641724638316461" type="number" />
+                    <instance-variable name="Confirm" sid="5899272596289875" type="number" />
+                    <instance-variable name="Cancel" sid="4616881591755484" type="number" />
+                    <instance-variable name="Menu" sid="2168213636508799" type="number" />
+                    <instance-variable name="LastUp" sid="1622459949020876" type="number" />
+                    <instance-variable name="LastDown" sid="3653498277383987" type="number" />
+                    <instance-variable name="LastLeft" sid="1053485227981488" type="number" />
+                    <instance-variable name="LastRight" sid="1751951803115606" type="number" />
+                    <instance-variable name="LastConfirm" sid="3632648287625289" type="number" />
+                    <instance-variable name="LastCancel" sid="1077614757894582" type="number" />
+                    <instance-variable name="LastMenu" sid="9025045177578852" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6541956784524688" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Function" sid="7786981344801906">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="AJAX" sid="1871150019731238">
+                <plugin id="AJAX" />
+            </object-type>
+            <object-type name="Audio" sid="130305442643432">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Touch" sid="833371787328053">
+                <plugin id="Touch" />
+            </object-type>
+            <object-type name="Camera" sid="209025639041519">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="ScrollTo" sid="757113726603525">
+                        <behavior id="scrollto" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="696392518061991" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="BattleUI">
+            <object-type name="HPBackground" sid="8009642851719156">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="HPBar" sid="5315983389834433">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="KRBar" sid="8840599197819951">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="UIAct" sid="9683599283524679">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7839461660390996" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Highlight" pingpong="0" repeatcount="1" repeatto="0" sid="5181432374441549" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_actbt_center_1.png">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UIFight" sid="9343233059165768">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2415236592226629" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Highlight" pingpong="0" repeatcount="1" repeatto="0" sid="5506998997872373" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_fightbt_1.png">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UIItem" sid="9790445263738264">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4560456212490265" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Highlight" pingpong="0" repeatcount="1" repeatto="0" sid="7286896709592169" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_itembt_1.png">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UIMercy" sid="3900276529955833">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5127942938396299" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Highlight" pingpong="0" repeatcount="1" repeatto="0" sid="4270938902148832" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <image-point name="Heart" x="0.145455" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CombatZone" sid="141231765387603">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="TargetLeft" sid="6021697186517032" type="number" />
+                    <instance-variable name="TargetTop" sid="7358547809624895" type="number" />
+                    <instance-variable name="TargetRight" sid="1387227575863189" type="number" />
+                    <instance-variable name="TargetBottom" sid="9275911755738286" type="number" />
+                    <instance-variable name="InfoText" sid="9266371524172021" type="string" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="CombatZoneBorder" sid="6657741784745805">
+                <plugin id="TiledBg" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="986637488598136">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <texture />
+            </object-type>
+            <object-type name="CombatZoneClipper" sid="2903163662070948">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="Target" sid="4243712716812677">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="State" sid="5475329447475825" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698907272053593" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504274" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_target_0.png">
+                            <collision-poly>
+                                <point x="0.0693431" y="0.324786" />
+                                <point x="0.5" y="0.00854701" />
+                                <point x="0.930657" y="0.324786" />
+                                <point x="0.998175" y="0.495726" />
+                                <point x="0.928832" y="0.666667" />
+                                <point x="0.5" y="0.982906" />
+                                <point x="0.0711679" y="0.666667" />
+                                <point x="0.00182482" y="0.495726" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HP" sid="1931015301211759">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8343756916975768" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="1" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_hpname_0.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.956522" y="0.1" />
+                                <point x="0.956522" y="0.5" />
+                                <point x="0.826087" y="0.6" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="KR" sid="2609083740733856">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4658499880468184" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_krmeter_0.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TargetChoice1" sid="260070398441684">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="6124536967285148" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6300494068884098" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
+                    </animation>
+                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="899115953493373" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Strike" sid="1284677255483501">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="942583768887371" speed="10">
+                        <frame duration="1" hotspotX="-1" hotspotY="5.66667" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_0.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.5" y="0.333333" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="-0.5" hotspotY="1.36364" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_1.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0.428571" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_2.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0.15625" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_3.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="-0.75" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_4.png" />
+                        <frame duration="1" hotspotX="-0.142857" hotspotY="-4" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_strike_5.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CombatZoneUnclipper" sid="2731133994133496">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="TargetChoice2" sid="920191097199907">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction2" sid="402240138839839" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409347744308818" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
+                    </animation>
+                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="130871670000927" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="NotNext" pingpong="0" repeatcount="1" repeatto="0" sid="274419324330544" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TargetChoice3" sid="606534576089348">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Direction2" sid="225206938910302" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="474225170371824" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
+                        <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
+                    </animation>
+                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="760215382452438" speed="30">
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="NotNext" pingpong="0" repeatcount="1" repeatto="0" sid="717688876271840" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneHPBackground" sid="204782454956108">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="UndyneHPBar" sid="889459779615919">
+                <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="Enemies">
+            <object-type name="UndyneHead" sid="2086066613273419">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="1558614189746918" type="number" />
+                    <instance-variable name="OffsetX" sid="4074126684641977" type="number" />
+                    <instance-variable name="OffsetY" sid="8283317758694072" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2276838282479599" speed="5">
+                        <frame duration="1" hotspotX="0.589744" hotspotY="0.272727" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadDefault.png">
+                            <image-point name="Hair" x="0.307692" y="0.212121" />
+                            <image-point name="Eyebeam" x="0.615385" y="0.484848" />
+                            <collision-poly>
+                                <point x="0.0769231" y="0.121212" />
+                                <point x="0.487179" y="0.030303" />
+                                <point x="0.769231" y="0.272727" />
+                                <point x="0.923077" y="0.515152" />
+                                <point x="0.846154" y="0.848485" />
+                                <point x="0.487179" y="0.969697" />
+                                <point x="0.153846" y="0.818182" />
+                                <point x="0.0769231" y="0.515152" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="LookLeft" pingpong="0" repeatcount="1" repeatto="0" sid="4388466239935075" speed="5">
+                        <frame duration="1" hotspotX="0.487179" hotspotY="1" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadLookLeftSweat.png">
+                            <image-point name="Sweat" x="0.487179" y="-0.03125" />
+                            <collision-poly>
+                                <point x="0.0769231" y="0.09375" />
+                                <point x="0.487179" y="0.03125" />
+                                <point x="0.769231" y="0.25" />
+                                <point x="0.923077" y="0.46875" />
+                                <point x="0.846154" y="0.8125" />
+                                <point x="0.487179" y="0.96875" />
+                                <point x="0.128205" y="0.8125" />
+                                <point x="0.0769231" y="0.46875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Wink" pingpong="0" repeatcount="1" repeatto="0" sid="6457042623121455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadDefault.png">
+                            <image-point name="Sweat" x="0.5" y="0" />
+                            <collision-poly>
+                                <point x="0.1" y="0.117647" />
+                                <point x="0.5" y="0.0294118" />
+                                <point x="0.775" y="0.264706" />
+                                <point x="0.925" y="0.5" />
+                                <point x="0.85" y="0.823529" />
+                                <point x="0.5" y="0.941176" />
+                                <point x="0.175" y="0.794118" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="ClosedEyes" pingpong="0" repeatcount="1" repeatto="0" sid="8089043188246127" speed="5">
+                        <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Sid\undyne-construct-2\Animations\UndyneHead\ClosedEyes\000.png">
+                            <image-point name="Sweat" x="0.512821" y="0" />
+                            <collision-poly>
+                                <point x="0.0769231" y="0.09375" />
+                                <point x="0.487179" y="0.03125" />
+                                <point x="0.769231" y="0.28125" />
+                                <point x="0.923077" y="0.5" />
+                                <point x="0.846154" y="0.8125" />
+                                <point x="0.487179" y="0.96875" />
+                                <point x="0.153846" y="0.8125" />
+                                <point x="0.0769231" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="NoEyes" pingpong="0" repeatcount="1" repeatto="0" sid="2373656401037775" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadDefault.png">
+                            <image-point name="Sweat" x="0.5" y="0" />
+                            <collision-poly>
+                                <point x="0.1" y="0.117647" />
+                                <point x="0.5" y="0.0294118" />
+                                <point x="0.775" y="0.264706" />
+                                <point x="0.925" y="0.5" />
+                                <point x="0.85" y="0.823529" />
+                                <point x="0.5" y="0.941176" />
+                                <point x="0.175" y="0.794118" />
+                                <point x="0.1" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="BlueEye" pingpong="0" repeatcount="1" repeatto="0" sid="4492125680738175" speed="5">
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.30303" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadHurt.png">
+                            <image-point name="Hair" x="0.3" y="0.212121" />
+                            <image-point name="Eyebeam" x="0.625" y="0.484848" />
+                            <collision-poly>
+                                <point x="0.1" y="0.121212" />
+                                <point x="0.5" y="0.030303" />
+                                <point x="0.775" y="0.272727" />
+                                <point x="0.925" y="0.484848" />
+                                <point x="0.85" y="0.818182" />
+                                <point x="0.5" y="0.969697" />
+                                <point x="0.15" y="0.818182" />
+                                <point x="0.1" y="0.484848" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="14" loop="0" name="Tired1" pingpong="0" repeatcount="1" repeatto="0" sid="9055351961421601" speed="5">
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.513514" y="0" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.513514" y="0" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125" original-source="C:\Users\Sid\c2-undyne-fight\Textures\UndyneScream2.png">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.513514" y="0" />
+                            <image-point name="Imagepoint 1" x="0.621622" y="0.28125" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.621622" y="0.3125" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.513514" y="0" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.28125">
+                            <image-point name="Sweat" x="0.513514" y="0" />
+                            <collision-poly>
+                                <point x="0.125" y="0.133333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.875" y="0.133333" />
+                                <point x="0.96875" y="0.5" />
+                                <point x="0.875" y="0.866667" />
+                                <point x="0.5" y="1" />
+                                <point x="0.125" y="0.866667" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.621622" hotspotY="0.3125">
+                            <collision-poly>
+                                <point x="0.216216" y="0.25" />
+                                <point x="0.486486" y="0" />
+                                <point x="0.783784" y="0.25" />
+                                <point x="0.945946" y="0.5" />
+                                <point x="0.891892" y="0.875" />
+                                <point x="0.486486" y="1" />
+                                <point x="0.108108" y="0.875" />
+                                <point x="0.0540541" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Tired2" pingpong="0" repeatcount="1" repeatto="0" sid="3836599280297155" speed="5">
+                        <frame duration="1" hotspotX="0.589744" hotspotY="0.28125" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHeadSmile.png">
+                            <image-point name="Hair" x="0.307692" y="0.21875" />
+                            <collision-poly>
+                                <point x="0.102564" y="0.10625" />
+                                <point x="0.487179" y="0" />
+                                <point x="0.871795" y="0.10625" />
+                                <point x="0.967949" y="0.484375" />
+                                <point x="0.871795" y="0.8625" />
+                                <point x="0.487179" y="1" />
+                                <point x="0.102564" y="0.8625" />
+                                <point x="0.00641026" y="0.484375" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneLeftArm" sid="6007327897630886">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="513306724159256" type="number" />
+                    <instance-variable name="OffsetX" sid="966069645933857" type="number" />
+                    <instance-variable name="OffsetY" sid="845260968886691" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6043785673298376" speed="15">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneLeftArm.png">
+                            <collision-poly>
+                                <point x="0.157895" y="0.0681818" />
+                                <point x="0.473684" y="0.0909091" />
+                                <point x="0.631579" y="0.159091" />
+                                <point x="0.842105" y="0.5" />
+                                <point x="0.789474" y="0.909091" />
+                                <point x="0.473684" y="1" />
+                                <point x="0.263158" y="0.886364" />
+                                <point x="0.368421" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneLegs" sid="9590658027348857">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="NextAttack" sid="2281878023018379" type="number" />
+                    <instance-variable name="HitAttempts" sid="900119164280441" type="number" />
+                    <instance-variable name="DodgeState" sid="5098251647105319" type="number" />
+                    <instance-variable name="DodgeTimer" sid="3509506029893432" type="number" />
+                    <instance-variable name="JustDodged" sid="7696753463127348" type="boolean" />
+                    <instance-variable name="XSpeed" sid="4058871107931012" type="number" />
+                    <instance-variable name="T" sid="599817226785996" type="number" />
+                    <instance-variable name="XOffset" sid="146277895435273" type="number" />
+                    <instance-variable name="TimeMarker" sid="275964094348047" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Standing" pingpong="0" repeatcount="1" repeatto="0" sid="5481948914165362" speed="5">
+                        <frame duration="1" hotspotX="0.525" hotspotY="1" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneLegs.png">
+                            <image-point name="Torso" x="-0.325" y="-0.809524" />
+                            <image-point name="Waist" x="0.9" y="-0.261905" />
+                            <image-point name="Head" x="0.575" y="-5.16667" />
+                            <image-point name="RightArm" x="0.125" y="-0.928571" />
+                            <collision-poly>
+                                <point x="0.15" y="0.142857" />
+                                <point x="0.5" y="0" />
+                                <point x="0.825" y="0.166667" />
+                                <point x="0.8" y="0.5" />
+                                <point x="0.975" y="0.97619" />
+                                <point x="0.5" y="0.97619" />
+                                <point x="0.05" y="0.952381" />
+                                <point x="0.15" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Sitting" pingpong="0" repeatcount="1" repeatto="0" sid="6382436399145165" speed="5">
+                        <frame duration="1" hotspotX="0.480769" hotspotY="0.882353">
+                            <image-point name="Torso" x="0.480769" y="0.0588235" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneRightArm" sid="4934231145646729">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="526626732011484" type="number" />
+                    <instance-variable name="OffsetX" sid="965073170881691" type="number" />
+                    <instance-variable name="OffsetY" sid="571800602557338" type="number" />
+                    <instance-variable name="TargetAngle" sid="807412556715932" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7107173151154428" speed="5">
+                        <frame duration="1" hotspotX="0.782609" hotspotY="0" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneRightArm.png">
+                            <collision-poly>
+                                <point x="0.413043" y="0.25" />
+                                <point x="0.5" y="0.131579" />
+                                <point x="0.891304" y="0.0657895" />
+                                <point x="0.695652" y="0.5" />
+                                <point x="0.456522" y="0.671053" />
+                                <point x="0.5" y="0.618421" />
+                                <point x="0.0217391" y="0.986842" />
+                                <point x="0.434783" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneTorso" sid="6308750117528714">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="3683915590450527" type="number" />
+                    <instance-variable name="OffsetX" sid="7388070819070914" type="number" />
+                    <instance-variable name="OffsetY" sid="6179632542687228" type="number" />
+                    <instance-variable name="AngleOffset" sid="100523001789193" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1874766620274337" speed="5">
+                        <frame duration="1" hotspotX="0.0759494" hotspotY="0.482759" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneLeftArm.png">
+                            <image-point name="Head" x="-0.164557" y="-0.0689655" />
+                            <image-point name="LeftArm" x="0.670886" y="0.396552" />
+                            <image-point name="RightArm" x="0.43038" y="0.413793" />
+                            <collision-poly>
+                                <point x="0.0886076" y="0.12069" />
+                                <point x="0.493671" y="0.293103" />
+                                <point x="0.911392" y="0.12069" />
+                                <point x="0.822785" y="0.5" />
+                                <point x="0.708861" y="0.603448" />
+                                <point x="0.493671" y="1" />
+                                <point x="0.291139" y="0.603448" />
+                                <point x="0.177215" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Shrug" pingpong="0" repeatcount="1" repeatto="0" sid="1031353307450106" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_sansb_torso_1.png">
+                            <image-point name="Head" x="0.5" y="0.208333" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="1" y="0" />
+                                <point x="0.986111" y="0.958333" />
+                                <point x="0.0138889" y="0.958333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpeechBubble" sid="4418147656760408">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4563758704400881" speed="5">
+                        <frame duration="1" hotspotX="-0.11215" hotspotY="0.00943396" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_blconwdshrt_0.png">
+                            <collision-poly>
+                                <point x="0.00467264" y="0.245283" />
+                                <point x="0.439252" y="0.00943396" />
+                                <point x="0.962617" y="0.0754717" />
+                                <point x="0.995327" y="0.5" />
+                                <point x="0.96729" y="0.933963" />
+                                <point x="0.439252" y="0.990566" />
+                                <point x="0.00467264" y="0.754717" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="NoEffects" pingpong="0" repeatcount="1" repeatto="0" sid="4566612407065255" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.105485" y="0.240385" />
+                                <point x="0.49789" y="0" />
+                                <point x="0.970464" y="0.0673077" />
+                                <point x="1" y="0.5" />
+                                <point x="0.974684" y="0.942308" />
+                                <point x="0.49789" y="1" />
+                                <point x="0.105485" y="0.759615" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SansBody2" sid="507823594300852">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="4" loop="0" name="HandDown" pingpong="0" repeatcount="1" repeatto="0" sid="227451710680379" speed="15">
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.4" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.385714" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.428571" />
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.984375" y="0" />
+                                <point x="0.984375" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.442857" />
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="HandUp" pingpong="0" repeatcount="1" repeatto="0" sid="122172449378172" speed="15">
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.428571" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.442857" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.4" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.385714" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.46875" hotspotY="1">
+                            <image-point name="Head" x="0.46875" y="0.4" />
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="HandRight" pingpong="0" repeatcount="1" repeatto="0" sid="970697881241802" speed="15">
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.34375" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.322917" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.3125" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.375" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.354167" y="0.125" />
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="HandLeft" pingpong="0" repeatcount="1" repeatto="0" sid="254876321630402" speed="15">
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.354167" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.375" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.3125" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.322917" y="0.125" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.34375" hotspotY="1">
+                            <image-point name="Head" x="0.34375" y="0.125" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneHair" sid="163829987971228">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="711338918387593" type="number" />
+                    <instance-variable name="OffsetX" sid="503657509619421" type="number" />
+                    <instance-variable name="OffsetY" sid="568112350649102" type="number" />
+                    <instance-variable name="AngleOffset" sid="190593698336056" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258443743014987" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.533333" original-source="C:\Users\Sid\undyne-construct-2\Animations\UndyneHair\Default\000.png">
+                            <collision-poly>
+                                <point x="0.483871" y="0.0666667" />
+                                <point x="0.903226" y="0.2" />
+                                <point x="0.967742" y="0.466667" />
+                                <point x="0.83871" y="0.666667" />
+                                <point x="0.483871" y="0.933333" />
+                                <point x="0.16129" y="0.666667" />
+                                <point x="0" y="0.466667" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Flowing" pingpong="0" repeatcount="1" repeatto="0" sid="645580511303418" speed="5">
+                        <frame duration="1" hotspotX="0.772727" hotspotY="0.911765" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneHair.png">
+                            <collision-poly>
+                                <point x="0.227273" y="0.147059" />
+                                <point x="0.5" y="0.294118" />
+                                <point x="0.681818" y="0.205882" />
+                                <point x="0.818182" y="0.5" />
+                                <point x="0.818182" y="0.882353" />
+                                <point x="0.5" y="0.852941" />
+                                <point x="0.363636" y="0.764706" />
+                                <point x="0.181818" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneWaist" sid="143297671209672">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="336207477212406" type="number" />
+                    <instance-variable name="OffsetX" sid="698706383359029" type="number" />
+                    <instance-variable name="OffsetY" sid="780014078020568" type="number" />
+                    <instance-variable name="AngleOffset" sid="117093259933669" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889769957971389" speed="5">
+                        <frame duration="1" hotspotX="0.878049" hotspotY="-0.0357143" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneWaist.png">
+                            <image-point name="Legs" x="1.02439" y="-0.0357143" />
+                            <image-point name="Torso" x="0.512195" y="0" />
+                            <collision-poly>
+                                <point x="0.170732" y="0.25" />
+                                <point x="0.487805" y="0.178571" />
+                                <point x="0.829268" y="0.25" />
+                                <point x="0.926829" y="0.5" />
+                                <point x="0.951219" y="0.928571" />
+                                <point x="0.487805" y="0.535714" />
+                                <point x="0.0487805" y="0.928571" />
+                                <point x="0.0731707" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Eyebeam" sid="319890518434515">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="919072422631200" type="number" />
+                    <instance-variable name="AngleOffset" sid="533816873725810" type="number" />
+                    <instance-variable name="OpacityOffset" sid="294286011707487" type="number" />
+                    <instance-variable name="XScaleOffset" sid="209764353607028" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="486709760161342" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.565217" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneEyeBeam.png">
+                            <collision-poly>
+                                <point x="0.0463576" y="0.304348" />
+                                <point x="0.496689" y="0.478261" />
+                                <point x="0.913907" y="0.565217" />
+                                <point x="0.715232" y="0.478261" />
+                                <point x="0.496689" y="0.608696" />
+                                <point x="0.0331126" y="0.782609" />
+                                <point x="0.00662252" y="0.478261" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Attacks">
+            <object-type name="BoneH" sid="3019589746608161">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="BoneV" sid="3868174782291034">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="GasterBlast1" sid="9836012384209519">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="BlastTime" sid="9838422767648153" type="number" />
+                    <instance-variable name="Timer" sid="3111458825166214" type="number" />
+                    <instance-variable name="BaseSize" sid="4499117244240895" type="number" />
+                    <instance-variable name="SineSize" sid="3652599263413905" type="number" />
+                </instance-variables>
+                <container>
+                    <type>GasterBlaster</type>
+                    <type>GasterBlastHit</type>
+                    <type>GasterBlast1</type>
+                    <type>GasterBlast2</type>
+                    <type>GasterBlast3</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="GasterBlaster" sid="7974524067202295">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Ang" sid="3339694860544266" type="number" />
+                    <instance-variable name="EndX" sid="5496271542375511" type="number" />
+                    <instance-variable name="EndY" sid="6947181727264729" type="number" />
+                    <instance-variable name="EndAng" sid="9692461505937431" type="number" />
+                    <instance-variable name="State" sid="8667025344021268" type="number" />
+                    <instance-variable name="Timer" sid="4004809633270347" type="number" />
+                    <instance-variable name="LeaveSpeed" sid="1374973730100997" type="number" />
+                </instance-variables>
+                <container>
+                    <type>GasterBlaster</type>
+                    <type>GasterBlastHit</type>
+                    <type>GasterBlast1</type>
+                    <type>GasterBlast2</type>
+                    <type>GasterBlast3</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140797437682819" speed="5">
+                        <frame duration="1" hotspotX="0.491228" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="0.977273" />
+                                <point x="0" y="0.0227273" />
+                                <point x="1" y="0.0227273" />
+                                <point x="1" y="0.977273" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="1" name="Fire" pingpong="0" repeatcount="1" repeatto="3" sid="4589316365590618" speed="30">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0.0909091" />
+                                <point x="1" y="0.0909091" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0.0909091" />
+                                <point x="1" y="0.0909091" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0.0227273" />
+                                <point x="1" y="0.0227273" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Platform1" sid="1226268899238104">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="4182532409429375" type="number" />
+                    <instance-variable name="Speed" sid="9338468636982498" type="number" />
+                    <instance-variable name="Reverse" sid="1757310495919901" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="2517055594929798">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                    <behavior-type name="CustomMovement" sid="8396425350937595">
+                        <behavior id="custom" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Platform1</type>
+                    <type>Platform2</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="Platform2" sid="6981383464931416">
+                <plugin id="NinePatch" />
+                <container>
+                    <type>Platform1</type>
+                    <type>Platform2</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="BoneStabV" sid="8140934880742138">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="BoneStabH" sid="6503092777075739">
+                <plugin id="NinePatch" />
+                <texture />
+            </object-type>
+            <object-type name="BoneStabWarn" sid="4163262150020477">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="Direction" sid="1708321725631724" type="number" />
+                    <instance-variable name="Distance" sid="1065051569636671" type="number" />
+                    <instance-variable name="WarnTime" sid="4829472285865959" type="number" />
+                    <instance-variable name="StayTime" sid="8313946059993536" type="number" />
+                </instance-variables>
+                <texture />
+            </object-type>
+            <object-type name="MenuBoneBottom" sid="761861833921609">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="State" sid="992680048340304" type="number" />
+                    <instance-variable name="Button" sid="5567578753522818" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4025981469830428" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Documents\Undertale Rip\Sprites\spr_s_boneloop_out_0.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.0454545" />
+                                <point x="0.857143" y="0.0454545" />
+                                <point x="0.857143" y="0.954545" />
+                                <point x="0.142857" y="0.954545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuBoneLeft" sid="5246535965326995">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Timer" sid="7519107776133302" type="number" />
+                    <instance-variable name="Destroy" sid="6433670307252687" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1189648859175843" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\Documents\Undertale Rip\Sprites\spr_s_boneloop_out_0.png">
+                            <collision-poly>
+                                <point x="0.142857" y="0.0454545" />
+                                <point x="0.857143" y="0.0454545" />
+                                <point x="0.857143" y="0.954545" />
+                                <point x="0.142857" y="0.954545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GasterBlast2" sid="336730486351203">
+                <plugin id="TiledBg" />
+                <container>
+                    <type>GasterBlaster</type>
+                    <type>GasterBlastHit</type>
+                    <type>GasterBlast1</type>
+                    <type>GasterBlast2</type>
+                    <type>GasterBlast3</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="GasterBlast3" sid="508841962091807">
+                <plugin id="TiledBg" />
+                <container>
+                    <type>GasterBlaster</type>
+                    <type>GasterBlastHit</type>
+                    <type>GasterBlast1</type>
+                    <type>GasterBlast2</type>
+                    <type>GasterBlast3</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="GasterBlastHit" sid="165116925986465">
+                <plugin id="TiledBg" />
+                <container>
+                    <type>GasterBlaster</type>
+                    <type>GasterBlastHit</type>
+                    <type>GasterBlast1</type>
+                    <type>GasterBlast2</type>
+                    <type>GasterBlast3</type>
+                </container>
+                <texture />
+            </object-type>
+            <object-type name="ArrowU" sid="384081414440543">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="196785862414210" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.481481" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\ArrowU.png">
+                            <collision-poly>
+                                <point x="0.133333" y="0.222222" />
+                                <point x="0.533333" y="0.0740741" />
+                                <point x="0.866666" y="0.259259" />
+                                <point x="0.8" y="0.481481" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0.533333" y="0.962963" />
+                                <point x="0.200001" y="0.703703" />
+                                <point x="0.200001" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="383520393147878" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.481481" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedUpArrow.png">
+                            <collision-poly>
+                                <point x="0.133333" y="0.222222" />
+                                <point x="0.533333" y="0.0740741" />
+                                <point x="0.866666" y="0.259259" />
+                                <point x="0.8" y="0.481481" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0.533333" y="0.962963" />
+                                <point x="0.200001" y="0.703703" />
+                                <point x="0.200001" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ArrowD" sid="378720589141247">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685192839949662" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.592593" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\DownArrow.png">
+                            <collision-poly>
+                                <point x="0.200001" y="0.296296" />
+                                <point x="0.533333" y="0.037037" />
+                                <point x="0.8" y="0.333334" />
+                                <point x="0.933333" y="0.592593" />
+                                <point x="0.733333" y="0.814815" />
+                                <point x="0.533333" y="0.925926" />
+                                <point x="0.266666" y="0.851852" />
+                                <point x="0.0666661" y="0.592593" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="224170496520165" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.592593" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedDownArrow.png">
+                            <collision-poly>
+                                <point x="0.200001" y="0.296296" />
+                                <point x="0.533333" y="0.037037" />
+                                <point x="0.8" y="0.333334" />
+                                <point x="0.933333" y="0.592593" />
+                                <point x="0.733333" y="0.814815" />
+                                <point x="0.533333" y="0.925926" />
+                                <point x="0.266666" y="0.851852" />
+                                <point x="0.0666661" y="0.592593" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ArrowR" sid="234206888522036">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="694868594724852" speed="5">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RightArrow.png">
+                            <collision-poly>
+                                <point x="0.25926" y="0.2" />
+                                <point x="0.555556" y="0.0666672" />
+                                <point x="0.814815" y="0.266667" />
+                                <point x="0.888889" y="0.6" />
+                                <point x="0.777778" y="0.866667" />
+                                <point x="0.555556" y="0.933333" />
+                                <point x="0.370371" y="0.8" />
+                                <point x="0.037037" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="467062885764574" speed="5">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedRightArrow.png">
+                            <collision-poly>
+                                <point x="0.25926" y="0.2" />
+                                <point x="0.555556" y="0.0666672" />
+                                <point x="0.814815" y="0.266667" />
+                                <point x="0.888889" y="0.6" />
+                                <point x="0.777778" y="0.866667" />
+                                <point x="0.555556" y="0.933333" />
+                                <point x="0.370371" y="0.8" />
+                                <point x="0.037037" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ArrowL" sid="466456286359602">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970952810398754" speed="5">
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\LeftArrow.png">
+                            <collision-poly>
+                                <point x="0.185185" y="0.2" />
+                                <point x="0.444444" y="0.0666672" />
+                                <point x="0.740741" y="0.2" />
+                                <point x="0.962963" y="0.6" />
+                                <point x="0.62963" y="0.8" />
+                                <point x="0.444444" y="0.933333" />
+                                <point x="0.259259" y="0.866667" />
+                                <point x="0.111111" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="305447689263250" speed="5">
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedLeftArrow.png">
+                            <collision-poly>
+                                <point x="0.185185" y="0.2" />
+                                <point x="0.444444" y="0.0666672" />
+                                <point x="0.740741" y="0.2" />
+                                <point x="0.962963" y="0.6" />
+                                <point x="0.62963" y="0.8" />
+                                <point x="0.444444" y="0.933333" />
+                                <point x="0.259259" y="0.866667" />
+                                <point x="0.111111" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RArrowD" sid="768687766538791">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239668656141619" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\YellowUpArrow.png">
+                            <collision-poly>
+                                <point x="0.0714286" y="0.291667" />
+                                <point x="0.428571" y="0.0416667" />
+                                <point x="0.857143" y="0.291667" />
+                                <point x="0.785714" y="0.5" />
+                                <point x="0.785714" y="0.666667" />
+                                <point x="0.428571" y="0.958333" />
+                                <point x="0.214286" y="0.625" />
+                                <point x="0.214286" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RArrowU" sid="748293270196813">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681828122932922" speed="5">
+                        <frame duration="1" hotspotX="0.571429" hotspotY="0.619048" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\YellowDownArrow.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.047619" />
+                                <point x="0.785714" y="0.47619" />
+                                <point x="0.928571" y="0.619048" />
+                                <point x="0.857143" y="0.809524" />
+                                <point x="0.5" y="0.952381" />
+                                <point x="0.214286" y="0.809524" />
+                                <point x="0.0714286" y="0.619048" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RArrowR" sid="538176753493512">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131579907403878" speed="5">
+                        <frame duration="1" hotspotX="0.458333" hotspotY="0.571429" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\YellowLeftArrow.png">
+                            <collision-poly>
+                                <point x="0.208333" y="0.214286" />
+                                <point x="0.416667" y="0.071428" />
+                                <point x="0.666667" y="0.214286" />
+                                <point x="0.958333" y="0.571429" />
+                                <point x="0.583333" y="0.785714" />
+                                <point x="0.416667" y="0.928571" />
+                                <point x="0.25" y="0.857143" />
+                                <point x="0.0833333" y="0.571429" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RArrowL" sid="624867820120199">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987148544779097" speed="5">
+                        <frame duration="1" hotspotX="0.608696" hotspotY="0.571429" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\YellowRightArrow.png">
+                            <collision-poly>
+                                <point x="0.347826" y="0.214286" />
+                                <point x="0.565217" y="0.071428" />
+                                <point x="0.826087" y="0.214286" />
+                                <point x="1" y="0.571429" />
+                                <point x="0.73913" y="0.785714" />
+                                <point x="0.565217" y="0.928571" />
+                                <point x="0.391304" y="0.857143" />
+                                <point x="0.217391" y="0.571429" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Timeline">
+            <object-type global="1" name="TLActionList" sid="456555951765879">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="TLCurrentLine" sid="3081225054711249">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="TLVars" sid="7317040439391986">
+                <plugin id="Dictionary" />
+            </object-type>
+            <object-type global="1" name="TLLabels" sid="281757033099861">
+                <plugin id="Dictionary" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Fonts">
+            <object-type name="BattleFont" sid="6163397057824361">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Jcw87\Pictures\UndertaleBattleFont.png" />
+            </object-type>
+            <object-type name="SansFont" sid="5575857119740264">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Jcw87\Pictures\UndertaleSansFont.png" />
+            </object-type>
+            <object-type name="DefaultFont" sid="1422059525027614">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Jcw87\Pictures\UndertaleDefaultFont.png" />
+            </object-type>
+            <object-type name="DamageFont" sid="501546311307215">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Jcw87\Pictures\UndertaleDamageFont.png" />
+            </object-type>
+            <object-type name="SpriteFont" sid="328881028157402">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Sid\c2-undyne-fight\Textures\UndyneTextFont.png" />
+            </object-type>
+            <object-type name="UndyneFont2" sid="880848179649442">
+                <plugin id="Spritefont2" />
+                <texture original-source="C:\Users\Sid\c2-undyne-fight\Textures\UndyneTextFont.png" />
+            </object-type>
+        </object-folder>
+        <object-folder name="TouchUI">
+            <object-type name="TouchA" sid="117524411669736">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="688431823067020" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="174733332464142" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TouchB" sid="428292736598660">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="873294262795378" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Pressed" pingpong="0" repeatcount="1" repeatto="0" sid="642935057171834" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TouchDPad" sid="293725615020106">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="TouchID" sid="310120484498810" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="539337012850933" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Misc">
+            <object-type name="Blocker" sid="140005220710916">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739267201713464" speed="5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\Sid\Downloads\Customizeable Spear attack\Spear\Sprites\blocker.png">
+                            <collision-poly>
+                                <point x="0.08" y="0.08" />
+                                <point x="0.493333" y="0.0533333" />
+                                <point x="0.0933333" y="0.0933333" />
+                                <point x="0.493333" y="0.213333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="139068233171564" speed="5">
+                        <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\Sid\Downloads\Customizeable Spear attack\Spear\Sprites\blocker_a.png">
+                            <collision-poly>
+                                <point x="0.08" y="0.08" />
+                                <point x="0.493333" y="0.0533333" />
+                                <point x="0.0933333" y="0.0933333" />
+                                <point x="0.493333" y="0.213333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GreenCircle" sid="847749363964705">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370624140147389" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\Downloads\Customizeable Spear attack\Spear\Sprites\spear_background.png">
+                            <collision-poly>
+                                <point x="0.216216" y="0.216216" />
+                                <point x="0.5" y="0.0945946" />
+                                <point x="0.783784" y="0.216216" />
+                                <point x="0.905405" y="0.5" />
+                                <point x="0.783784" y="0.783784" />
+                                <point x="0.5" y="0.905405" />
+                                <point x="0.216216" y="0.783784" />
+                                <point x="0.0945946" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DStartLoc" sid="401573331346887">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="604107040547807" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedDownArrow.png">
+                            <collision-poly>
+                                <point x="0.291667" y="0.233333" />
+                                <point x="0.5" y="0" />
+                                <point x="0.666667" y="0.266667" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.625" y="0.7" />
+                                <point x="0.5" y="0.8" />
+                                <point x="0.333333" y="0.733333" />
+                                <point x="0.208333" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LStartLoc" sid="587221326465568">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="304346851652142" speed="5">
+                        <frame duration="1" hotspotX="0.518519" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedLeftArrow.png">
+                            <collision-poly>
+                                <point x="0.222222" y="0.25" />
+                                <point x="0.481481" y="0.166667" />
+                                <point x="0.777778" y="0.25" />
+                                <point x="1" y="0.5" />
+                                <point x="0.666667" y="0.625" />
+                                <point x="0.481481" y="0.708333" />
+                                <point x="0.296296" y="0.666667" />
+                                <point x="0.148148" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlayerHeart" sid="5960708907117077">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Mode" sid="6313592074891908" type="number" />
+                    <instance-variable name="Slammed" sid="4448468745440906" type="boolean" />
+                    <instance-variable name="SlamDamage" sid="122041775148508" type="boolean" />
+                    <instance-variable name="T" sid="930287223231363" type="number" />
+                    <instance-variable name="dark" sid="663642377225289" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="8958058217944609">
+                        <behavior id="custom" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3948179004351251" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Split" pingpong="0" repeatcount="1" repeatto="0" sid="9412816471889478" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RStartLoc" sid="290283644753788">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="414421355745717" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedRightArrow.png">
+                            <collision-poly>
+                                <point x="0.214286" y="0.25" />
+                                <point x="0.5" y="0.166667" />
+                                <point x="0.75" y="0.291667" />
+                                <point x="0.821429" y="0.5" />
+                                <point x="0.714286" y="0.666667" />
+                                <point x="0.5" y="0.708333" />
+                                <point x="0.321429" y="0.625" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UStartLoc" sid="582291313406860">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732579088256213" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedUpArrow.png">
+                            <collision-poly>
+                                <point x="0.25" y="0.230769" />
+                                <point x="0.5" y="0.0769231" />
+                                <point x="0.708333" y="0.269231" />
+                                <point x="0.666667" y="0.5" />
+                                <point x="0.666667" y="0.692308" />
+                                <point x="0.5" y="1" />
+                                <point x="0.291667" y="0.730769" />
+                                <point x="0.291667" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Opacity" sid="388748948626191">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="170673716386986" type="number" />
+                    <instance-variable name="TargetOpacity" sid="217962787247403" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="207789300779902" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type global="1" name="AttackList" sid="7966075756587832">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="MenuItem" sid="1630849692866887">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="3974683574216717" type="number" />
+                <instance-variable name="Text" sid="9053166434256353" type="string" />
+                <instance-variable name="Action" sid="8424291498582479" type="string" />
+                <instance-variable name="BackAction" sid="3202944525291714" type="string" />
+                <instance-variable name="Created" sid="1711039613963512" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="155770205370032" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="PlayerItems" sid="2840436798779952">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="ItemDB" sid="799284438884525">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="HeartShard" sid="4095409948730649">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="7822586923915929">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1279672314658953" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_heartshards_0.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.625" y="0.4375" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.75" y="0.6875" />
+                            <point x="0.5" y="0.625" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_heartshards_1.png">
+                        <collision-poly>
+                            <point x="0.375" y="0.4375" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.625" y="0.4375" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.3125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_heartshards_2.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.25" />
+                            <point x="0.75" y="0.25" />
+                            <point x="0.75" y="0.75" />
+                            <point x="0.3125" y="0.75" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_heartshards_3.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.375" />
+                            <point x="0.6875" y="0.375" />
+                            <point x="0.6875" y="0.6875" />
+                            <point x="0.3125" y="0.6875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="AttackLoader" sid="6354874427432412">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type global="1" name="MenuStack" sid="1417790766954608">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="FileChooser" sid="8898820624476746">
+            <plugin id="filechooser" />
+        </object-type>
+        <object-type name="Browser" sid="4029960250195912">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="PlayerHitbox" sid="728293317807613">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="405047860068601" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="475059253321355">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="563861682366270" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneLeftArm.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpinningSpear" sid="721116636011743">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="spinning" sid="372338060513061" type="boolean" />
+                <instance-variable name="rotspeed" sid="798458311106801" type="number" />
+                <instance-variable name="timeMarker" sid="173853288979507" type="number" />
+                <instance-variable name="speed" sid="328237839372909" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869887836847152" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\c2-undyne-fight\Textures\ArrowNoOutline.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.1" />
+                            <point x="0.75" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.9" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UndyneSlash" sid="858728823653864">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="T" sid="901556484622163" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="967425680502548" speed="5">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedSlash.png">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\GreenSlash.png">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UndyneSlashProjectile" sid="291466918976087">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="T" sid="308495374918047" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="193708750423959" speed="5">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedSlash.png">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\GreenSlash.png">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.503704">
+                        <collision-poly>
+                            <point x="0.0759076" y="0.17037" />
+                            <point x="0.49835" y="0.651852" />
+                            <point x="0.729373" y="0.607407" />
+                            <point x="0.907591" y="0.496296" />
+                            <point x="0.917492" y="0.814815" />
+                            <point x="0.49835" y="0.948148" />
+                            <point x="0.188119" y="0.577778" />
+                            <point x="0.161716" y="0.496296" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StabbingSpear" sid="819158422423645">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="TimeMarker" sid="327993787368857" type="number" />
+                <instance-variable name="RiseSpeed" sid="470907657588353" type="number" />
+                <instance-variable name="RiseTime" sid="276535513995741" type="number" />
+                <instance-variable name="Rising" sid="712194332368711" type="boolean" />
+                <instance-variable name="StabSpeed" sid="874861849687123" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797361171318319" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.483333" original-source="C:\Users\Sid\c2-undyne-fight\Textures\ArrowNoOutline.png">
+                        <collision-poly>
+                            <point x="0.277777" y="0.116666" />
+                            <point x="0.5" y="0.0166666" />
+                            <point x="0.722223" y="0.116666" />
+                            <point x="0.611111" y="0.483333" />
+                            <point x="0.611111" y="0.816666" />
+                            <point x="0.5" y="0.983333" />
+                            <point x="0.388889" y="0.816666" />
+                            <point x="0.388889" y="0.483333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="713195970461102">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="742096114605762" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="153894509442072">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="755978874605021" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RotatingSpear" sid="894381410202585">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="spinning" sid="638932576568204" type="boolean" />
+                <instance-variable name="rotspeed" sid="811466362143936" type="number" />
+                <instance-variable name="timeMarker" sid="373832460971589" type="number" />
+                <instance-variable name="speed" sid="769372591284879" type="number" />
+                <instance-variable name="TargetXPos" sid="347295570496972" type="number" />
+                <instance-variable name="TargetYPos" sid="479261302062895" type="number" />
+                <instance-variable name="lifetime" sid="893282770567239" type="number" />
+                <instance-variable name="index" sid="666877661173026" type="number" />
+                <instance-variable name="initialDist" sid="959511194031837" type="number" />
+                <instance-variable name="totalSpears" sid="377238692119061" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608487644522781" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneSpear.png">
+                        <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                        <collision-poly>
+                            <point x="0.75" y="0.9" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.9" />
+                            <point x="0.25" y="0.1" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="BoneStab" plugin-id="NinePatch" sid="9321183475132962">
+            <members>
+                <member>BoneStabH</member>
+                <member>BoneStabV</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Direction" sid="9712410343672045" type="number" />
+                <instance-variable name="Distance" sid="1340413306933887" type="number" />
+                <instance-variable name="DestX" sid="7626491151499593" type="number" />
+                <instance-variable name="DestY" sid="4662037835176925" type="number" />
+                <instance-variable name="StayTime" sid="4383237448031349" type="number" />
+                <instance-variable name="Reverse" sid="510004270528703" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="Bone" plugin-id="NinePatch" sid="2013892859044994">
+            <members>
+                <member>BoneH</member>
+                <member>BoneV</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Direction" sid="2353520185577067" type="number" />
+                <instance-variable name="Speed" sid="8541710245044527" type="number" />
+            </instance-variables>
+        </family>
+        <family name="RPGText" plugin-id="Spritefont2" sid="8627438680975019">
+            <members>
+                <member>BattleFont</member>
+                <member>DamageFont</member>
+                <member>DefaultFont</member>
+                <member>SansFont</member>
+                <member>UndyneFont2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Name" sid="8126938230629388" type="string" />
+                <instance-variable name="Voice" sid="7739643538975967" type="string" />
+                <instance-variable name="FullText" sid="4090187800761089" type="string" />
+                <instance-variable name="EndFunc" sid="8768540262486332" type="string" />
+                <instance-variable name="Interactive" sid="2703717793020135" type="boolean" />
+                <instance-variable name="CurrentChar" sid="8429195992300595" type="number" />
+                <instance-variable name="T" sid="9067313364631326" type="number" />
+                <instance-variable name="Timeout" sid="4487571781562274" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+        </family>
+        <family name="UIButtons" plugin-id="Sprite" sid="9802428034038081">
+            <members>
+                <member>UIAct</member>
+                <member>UIFight</member>
+                <member>UIItem</member>
+                <member>UIMercy</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="ID" sid="3161584809306413" type="number" />
+                <instance-variable name="Action" sid="5414051533652294" type="string" />
+            </instance-variables>
+        </family>
+        <family name="Attack9Patch" plugin-id="NinePatch" sid="9590353435551898">
+            <members>
+                <member>BoneH</member>
+                <member>BoneStabH</member>
+                <member>BoneStabV</member>
+                <member>BoneStabWarn</member>
+                <member>BoneV</member>
+                <member>Platform1</member>
+                <member>Platform2</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="6677681737098705" type="number" />
+                <instance-variable name="Karma" sid="6030229564139285" type="number" />
+                <instance-variable name="Color" sid="821640292253391" type="number" />
+            </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+            </effects>
+        </family>
+        <family name="AttackSprite" plugin-id="Sprite" sid="6631597198329078">
+            <members>
+                <member>GasterBlaster</member>
+                <member>MenuBoneBottom</member>
+                <member>MenuBoneLeft</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="1009715326578042" type="number" />
+                <instance-variable name="Karma" sid="1305040970412396" type="number" />
+            </instance-variables>
+        </family>
+        <family name="AttackTiled" plugin-id="TiledBg" sid="9784977049754561">
+            <members>
+                <member>GasterBlastHit</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Damage" sid="5846064141855004" type="number" />
+                <instance-variable name="Karma" sid="4419610502870706" type="number" />
+            </instance-variables>
+        </family>
+        <family name="TouchButton" plugin-id="Sprite" sid="902272746554209">
+            <members>
+                <member>TouchA</member>
+                <member>TouchB</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="TouchID" sid="636958093485166" type="number" />
+                <instance-variable name="Pressed" sid="875789127674825" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="ArrowSprite" plugin-id="Sprite" sid="379247942749989">
+            <members>
+                <member>ArrowD</member>
+                <member>ArrowL</member>
+                <member>ArrowR</member>
+                <member>ArrowU</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Direction" sid="197290466367887" type="number" />
+                <instance-variable name="Speed" sid="987199403945304" type="number" />
+                <instance-variable name="TimeMarker" sid="535457089372525" type="number" />
+            </instance-variables>
+        </family>
+        <family name="RArrowSprite" plugin-id="Sprite" sid="427990459672234">
+            <members>
+                <member>RArrowD</member>
+                <member>RArrowL</member>
+                <member>RArrowR</member>
+                <member>RArrowU</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Direction" sid="232388498783080" type="number" />
+                <instance-variable name="Speed" sid="692887740957779" type="number" />
+                <instance-variable name="BegunReverse" sid="115942876380924" type="boolean" />
+                <instance-variable name="BegunFinal" sid="928391771894465" type="boolean" />
+                <instance-variable name="TimeMarker" sid="592603018183870" type="number" />
+                <instance-variable name="ReverseMarker" sid="101081826666208" type="number" />
+                <instance-variable name="BGR1FD" sid="821548184602361" type="boolean" />
+                <instance-variable name="DebugTimer" sid="333916492495363" type="number" />
+                <instance-variable name="ReverseSpeedMultiplier" sid="617819402594352" type="number" />
+                <instance-variable name="TimeToBeginReverse" sid="106472324651024" type="number" />
+            </instance-variables>
+        </family>
+        <family name="TargetChoice" plugin-id="Sprite" sid="995886500926932">
+            <members>
+                <member>TargetChoice1</member>
+                <member>TargetChoice2</member>
+                <member>TargetChoice3</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Stopped" sid="576032247617867" type="boolean" />
+            </instance-variables>
+        </family>
+        <family name="SpinningSpearFamily" plugin-id="Sprite" sid="125412905357936">
+            <members>
+                <member>RotatingSpear</member>
+                <member>SpinningSpear</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>BattleScreen.xml</layout>
+        <layout>System.xml</layout>
+        <layout>MainMenu.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Battle.xml</event-sheet>
+        <event-sheet>InputManagement.xml</event-sheet>
+        <event-sheet>Globals.xml</event-sheet>
+        <event-sheet>Timeline.xml</event-sheet>
+        <event-sheet>Fonts.xml</event-sheet>
+        <event-sheet>RPGText.xml</event-sheet>
+        <event-sheet>Items.xml</event-sheet>
+        <event-sheet>AttackLoader.xml</event-sheet>
+        <event-sheet>MainMenu.xml</event-sheet>
+        <event-sheet>Menus.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Gamepad" uid="8">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Function" uid="17" />
+        <global-instance type="AJAX" uid="30" />
+        <global-instance type="Audio" uid="33">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="54" />
+        <global-instance type="Touch" uid="58">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Ding.ogg" />
+        <file name="PlayerFight.ogg" />
+        <file name="PlayerDamaged.ogg" />
+        <file name="SansSpeak.ogg" />
+        <file name="GasterBlaster.ogg" />
+        <file name="BoneStab.ogg" />
+        <file name="Warning.ogg" />
+        <file name="HeartShatter.ogg" />
+        <file name="GasterBlast.ogg" />
+        <file name="Flash.ogg" />
+        <file name="Slam.ogg" />
+        <file name="MenuSelect.ogg" />
+        <file name="HeartSplit.ogg" />
+        <file name="MenuCursor.ogg" />
+        <file name="BattleText.ogg" />
+        <file name="PlayerHeal.ogg" />
+        <file name="GasterBlast2.ogg" />
+        <file name="UndyneSpeak.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="mus_zz_megalovania.ogg" />
+        <file name="mus_zz_battleagainstatruehero.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="undyne_prefight.csv" />
+        <file name="undyne_intro.csv" />
+        <file name="undyne_slowrandom.csv" />
+        <file name="undyne_leftright.csv" />
+        <file name="undyne_spinningspears.csv" />
+        <file name="undyne_stabbingspears.csv" />
+        <file name="undyne_2x4.csv" />
+        <file name="undyne_burstarrows.csv" />
+        <file name="undyne_reverse1.csv" />
+        <file name="undyne_rotatingspears.csv" />
+        <file name="sans_boneslideh.csv" />
+        <file name="sans_bonegap1fast.csv" />
+        <file name="sans_platformblasterfast.csv" />
+        <file name="sans_spare.csv" />
+        <file name="u.csv" />
+        <file name="sans_bonestab2.csv" />
+        <file name="sans_boneslidev.csv" />
+        <file name="sans_multi1.csv" />
+        <file name="sans_randomblaster1.csv" />
+        <file name="sans_multi2.csv" />
+        <file name="sans_randomblaster2.csv" />
+        <file name="sans_bonestab3.csv" />
+        <file name="sans_multi3.csv" />
+        <file name="sans_final.csv" />
+    </files-folder>
+</c2project>
