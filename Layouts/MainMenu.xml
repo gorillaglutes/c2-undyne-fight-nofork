@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>MainMenu</name>
-    <sid>368089958086984</sid>
+    <sid>4489433801173846</sid>
     <event-sheet>MainMenu</event-sheet>
     <size>
         <width>640</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Menu" sid="925666213473017">
+        <layer name="Menu" sid="1385025260711742">
             <initially-visible>1</initially-visible>
             <background-color>0,0,0</background-color>
             <transparent>0</transparent>
@@ -31,13 +31,13 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Touch" sid="788187039800721">
+        <layer name="Touch" sid="352649659867774">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>0,0,0</background-color>
             <transparent>1</transparent>
             <parallax>
-                <x>1</x>
-                <y>1</y>
+                <x>0</x>
+                <y>0</y>
             </parallax>
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>

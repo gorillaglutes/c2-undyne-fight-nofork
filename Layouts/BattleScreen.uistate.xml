@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>237.428</position-x>
-        <position-y>105.227</position-y>
-        <position-z>68.3012</position-z>
-        <lookat-x>237.428</lookat-x>
-        <lookat-y>105.227</lookat-y>
+        <position-x>357.919</position-x>
+        <position-y>137.266</position-y>
+        <position-z>82.6437</position-z>
+        <lookat-x>357.919</lookat-x>
+        <lookat-y>137.266</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -19,16 +19,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <translucent-inactive-layers>0</translucent-inactive-layers>
     <properties>
         <property expanded="1" name="Layout properties" />
-        <property expanded="0" name="Layout Size" />
+        <property expanded="1" name="Layout Size" />
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Enemies" />
+    <active-layer name="Buttons" />
     <layers>
+        <layer locked="0" name="UnderAttacks" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Background" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Enemies" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Buttons" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="CombatZone" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="CombatZone" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Buttons" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="OpacityLayer" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="AttacksOverOpacity" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="CombatZoneClipped" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Overlay" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Touch" parallax-in-editor="0" visible="1" />
