@@ -14,12 +14,12 @@
                     <actions>
                         <action id="5" name="Push" sid="4455327624016498" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_bluebone&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_leftright&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="9396866984468434" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_bonegap1&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_intro&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="8811065622972931" type="AttackLoader">
@@ -29,7 +29,7 @@
                         </action>
                         <action id="5" name="Push" sid="3210289417785432" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_bonegap2&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_slowrandom&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action disabled="1" id="5" name="Push" sid="2069748953422304" type="AttackLoader">
@@ -64,7 +64,7 @@
                         </action>
                         <action id="5" name="Push" sid="4534521751290753" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_intro&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_prefight&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action disabled="1" id="5" name="Push" sid="3391111219319787" type="AttackLoader">
@@ -89,32 +89,32 @@
                         </action>
                         <action id="5" name="Push" sid="1362197829392964" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platforms1&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_spinningspears&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="7745298823847402" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platforms2&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_stabbingspears&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="1260174120863198" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platforms3&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_2x4&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="8766372860492814" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platforms4&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_burstarrows&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="9455036665125524" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platformblaster&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_reverse1&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action id="5" name="Push" sid="9777307155362394" type="AttackLoader">
                             <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;sans_platforms4hard&quot;</param>
+                            <param id="1" name="Value">&quot;undyne_rotatingspears&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
                         <action disabled="1" id="5" name="Push" sid="904902605703142" type="AttackLoader">

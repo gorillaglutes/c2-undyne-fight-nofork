@@ -577,7 +577,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3030336529009913" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_intro&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_prefight&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="8542394061486128" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -597,7 +597,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="5022431412441468" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_bonegap1&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_intro&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="892328920562479" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -617,7 +617,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="2117610159043014" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_bluebone&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_leftright&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="2335323764650383" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -637,7 +637,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="9509660814562553" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_bonegap2&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_slowrandom&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="2011632458044627" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -657,7 +657,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="578770692281859" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platforms1&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_spinningspears&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="2920387661146958" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -677,7 +677,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3225480518545867" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platforms2&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_stabbingspears&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="6300490246912156" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -697,7 +697,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="4860275815214738" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platforms3&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_2x4&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="3598830035157635" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -717,7 +717,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3776540688562493" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platforms4&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_burstarrows&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="3531329946577688" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -737,7 +737,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="4235681118143808" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platformblaster&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_reverse1&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="4624674001538727" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -757,7 +757,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="6659356367854469" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platforms4hard&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_rotatingspears&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="9078073712209508" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -11671,6 +11671,19 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="318203919014635" type="Function">
+                                    <param id="0" name="Name">&quot;DamagePlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">floor(random(8,13)){###}0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="865532497006521">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="450737372966954" type="PlayerHitbox">
+                                    <param id="0" name="Object">RotatingSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="463958761135778" type="Function">
                                     <param id="0" name="Name">&quot;DamagePlayer&quot;</param>
                                     <param id="1" name="Parameter {n}">floor(random(8,13)){###}0</param>
                                 </action>
