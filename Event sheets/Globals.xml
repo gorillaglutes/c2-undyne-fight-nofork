@@ -24,8 +24,17 @@
         <variable constant="0" name="SingleAttack" sid="9637412728316299" static="0" type="text"></variable>
         <variable constant="0" name="Name" sid="8522084662131715" static="0" type="text">Chara</variable>
         <variable constant="0" name="HP" sid="4067313995094888" static="0" type="number">60</variable>
+        <variable constant="0" name="AT" sid="464210671384356" static="0" type="number">30</variable>
+        <variable constant="0" name="BALLET_AT" sid="539053151803427" static="0" type="number">7</variable>
+        <variable constant="0" name="lastDamage" sid="444189074928665" static="0" type="number">0</variable>
         <variable constant="0" name="MaxHP" sid="2742940924955148" static="0" type="number">60</variable>
         <variable constant="0" name="UndyneHP" sid="382611922182268" static="0" type="number">23000</variable>
+        <variable constant="0" name="UndyneLastHP" sid="306426590729256" static="0" type="number">23000</variable>
+        <variable constant="0" name="UndyneMaxHP" sid="996966444686686" static="0" type="number">23000</variable>
+        <variable constant="0" name="UndyneDEF" sid="100109137920660" static="0" type="number">5</variable>
+        <variable constant="0" name="UndyneATK" sid="162863549767656" static="0" type="number">12</variable>
+        <variable constant="0" name="bonusfactor" sid="432905050848709" static="0" type="number">0</variable>
+        <variable constant="0" name="stretch" sid="951253933666979" static="0" type="number">0</variable>
         <variable constant="0" name="KR" sid="2189987320058474" static="0" type="number">0</variable>
         <variable constant="0" name="KR_T" sid="8948293770944489" static="0" type="number">0</variable>
         <variable constant="0" name="WeaponType" sid="399677559995510" static="0" type="number">1</variable>

@@ -401,6 +401,32 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CombatZoneTransparency" uid="95">
+                    <properties>
+                        <left-margin>16</left-margin>
+                        <right-margin>16</right-margin>
+                        <top-margin>16</top-margin>
+                        <bottom-margin>16</bottom-margin>
+                        <edges>Stretch</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Overlap</seams>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>33</x>
+                        <y>240</y>
+                        <z>0</z>
+                        <width>576</width>
+                        <height>144</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="CombatZone" uid="7">
                     <properties>
                         <left-margin>5</left-margin>
@@ -408,7 +434,7 @@
                         <top-margin>5</top-margin>
                         <bottom-margin>5</bottom-margin>
                         <edges>Stretch</edges>
-                        <fill>Tile</fill>
+                        <fill>Transparent</fill>
                         <initial-visibility>Invisible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                         <seams>Overlap</seams>
@@ -431,6 +457,34 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UndyneSpearTip" uid="96">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Disabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <T>0</T>
+                        <OffsetX>0</OffsetX>
+                        <OffsetY>0</OffsetY>
+                        <TargetAngle>0</TargetAngle>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>292</x>
+                        <y>77</y>
+                        <z>0</z>
+                        <width>92</width>
+                        <height>152</height>
+                        <depth>0</depth>
+                        <hotspotX>0.782608688</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -494,6 +548,29 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="UndyneHPBackgroundBorder" uid="98">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Timeout>0</Timeout>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>199</x>
+                        <y>511</y>
+                        <z>0</z>
+                        <width>202</width>
+                        <height>18</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="UIFight" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -591,46 +668,6 @@
                         <z>0</z>
                         <width>110</width>
                         <height>42</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="UndyneHPBackground" uid="86">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>270</x>
-                        <y>512</y>
-                        <z>0</z>
-                        <width>110</width>
-                        <height>21</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="UndyneHPBar" uid="87">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>546</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -817,6 +854,50 @@
                     <world>
                         <x>304</x>
                         <y>496</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UndyneHPBackground" uid="86">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <Timeout>0</Timeout>
+                        <TimeBetweenEnd>0.5</TimeBetweenEnd>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>200</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UndyneHPBar" uid="87">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>304</x>
+                        <y>546</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>

@@ -266,13 +266,23 @@
                 <instance-variables>
                     <instance-variable name="Direction" sid="6124536967285148" type="number" />
                 </instance-variables>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6300494068884098" speed="30">
                         <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
                         <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="899115953493373" speed="30">
-                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="6" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="443739523617096" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\hit.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -308,13 +318,23 @@
                 <instance-variables>
                     <instance-variable name="Direction2" sid="402240138839839" type="number" />
                 </instance-variables>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="409347744308818" speed="30">
                         <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
                         <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="130871670000927" speed="30">
+                    <animation framecount="6" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="130871670000927" speed="30">
                         <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="NotNext" pingpong="0" repeatcount="1" repeatto="0" sid="274419324330544" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -326,13 +346,23 @@
                 <instance-variables>
                     <instance-variable name="Direction2" sid="225206938910302" type="number" />
                 </instance-variables>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="474225170371824" speed="30">
                         <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_0.png" />
                         <frame duration="2" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jcw87\Documents\Undertale Rip\Sprites\spr_targetchoice_1.png" />
                     </animation>
-                    <animation framecount="1" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="760215382452438" speed="30">
+                    <animation framecount="6" loop="1" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="760215382452438" speed="30">
                         <frame duration="3" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="NotNext" pingpong="0" repeatcount="1" repeatto="0" sid="717688876271840" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -341,10 +371,153 @@
             </object-type>
             <object-type name="UndyneHPBackground" sid="204782454956108">
                 <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="Timeout" sid="489240598884477" type="number" />
+                    <instance-variable name="TimeBetweenEnd" sid="878951866159832" type="number" />
+                </instance-variables>
                 <texture />
             </object-type>
             <object-type name="UndyneHPBar" sid="889459779615919">
                 <plugin id="TiledBg" />
+                <texture />
+            </object-type>
+            <object-type name="Strike2" sid="841670501733293">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="crit" sid="557116067927464" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="Tint">
+                        <effect id="tint" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="12" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="342509490985703" speed="10">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_0.png">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.5" y="0.333333" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="0.666667" />
+                                <point x="0.5" y="0.333333" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_1.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.3" />
+                                <point x="0.74" y="0.5" />
+                                <point x="0.5" y="0.7" />
+                                <point x="0.28" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.3" />
+                                <point x="0.74" y="0.5" />
+                                <point x="0.5" y="0.7" />
+                                <point x="0.28" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_2.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.3" />
+                                <point x="0.74" y="0.5" />
+                                <point x="0.5" y="0.7" />
+                                <point x="0.28" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.3" />
+                                <point x="0.74" y="0.5" />
+                                <point x="0.5" y="0.7" />
+                                <point x="0.28" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_3.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.227273" />
+                                <point x="0.5" y="0.222727" />
+                                <point x="0.51" y="0.222727" />
+                                <point x="0.7" y="0.5" />
+                                <point x="0.51" y="0.777273" />
+                                <point x="0.49" y="0.777273" />
+                                <point x="0.22" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.227273" />
+                                <point x="0.5" y="0.222727" />
+                                <point x="0.51" y="0.222727" />
+                                <point x="0.7" y="0.5" />
+                                <point x="0.51" y="0.777273" />
+                                <point x="0.49" y="0.777273" />
+                                <point x="0.22" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_4.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.227273" />
+                                <point x="0.5" y="0.222727" />
+                                <point x="0.51" y="0.222727" />
+                                <point x="0.7" y="0.5" />
+                                <point x="0.51" y="0.777273" />
+                                <point x="0.49" y="0.777273" />
+                                <point x="0.22" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Sid\c2-undyne-fight-nofork\Files\ballet_5.png">
+                            <collision-poly>
+                                <point x="0.5" y="0.168182" />
+                                <point x="0.54" y="0.209091" />
+                                <point x="0.91" y="0.5" />
+                                <point x="0.56" y="0.8" />
+                                <point x="0.5" y="0.831818" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.168182" />
+                                <point x="0.54" y="0.209091" />
+                                <point x="0.91" y="0.5" />
+                                <point x="0.56" y="0.8" />
+                                <point x="0.5" y="0.831818" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0" hotspotY="0">
+                            <collision-poly>
+                                <point x="0.5" y="0.168182" />
+                                <point x="0.54" y="0.209091" />
+                                <point x="0.91" y="0.5" />
+                                <point x="0.56" y="0.8" />
+                                <point x="0.5" y="0.831818" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneHPBackgroundBorder" sid="482390506184090">
+                <plugin id="TiledBg" />
+                <instance-variables>
+                    <instance-variable name="Timeout" sid="687199890976697" type="number" />
+                </instance-variables>
                 <texture />
             </object-type>
         </object-folder>
@@ -717,6 +890,7 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7107173151154428" speed="5">
                         <frame duration="1" hotspotX="0.782609" hotspotY="0" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneRightArm.png">
+                            <image-point name="tip" x="0" y="1" />
                             <collision-poly>
                                 <point x="0.413043" y="0.25" />
                                 <point x="0.5" y="0.131579" />
@@ -962,6 +1136,31 @@
                                 <point x="0.496689" y="0.608696" />
                                 <point x="0.0331126" y="0.782609" />
                                 <point x="0.00662252" y="0.478261" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="UndyneSpearTip" sid="211444647173484">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="T" sid="908036792766573" type="number" />
+                    <instance-variable name="OffsetX" sid="541750560714634" type="number" />
+                    <instance-variable name="OffsetY" sid="953358085425467" type="number" />
+                    <instance-variable name="TargetAngle" sid="821560178498697" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903570840633779" speed="5">
+                        <frame duration="1" hotspotX="0.782609" hotspotY="0" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\UndyneRightArm.png">
+                            <collision-poly>
+                                <point x="0.413043" y="0.25" />
+                                <point x="0.5" y="0.131579" />
+                                <point x="0.891304" y="0.0657895" />
+                                <point x="0.695652" y="0.5" />
+                                <point x="0.456522" y="0.671053" />
+                                <point x="0.5" y="0.618421" />
+                                <point x="0.0217391" y="0.986842" />
+                                <point x="0.434783" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2029,6 +2228,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CombatZoneTransparency" sid="958882644133406">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
     </object-folder>
     <families>
         <family name="BoneStab" plugin-id="NinePatch" sid="9321183475132962">
@@ -2173,6 +2376,7 @@
                 <instance-variable name="DebugTimer" sid="333916492495363" type="number" />
                 <instance-variable name="ReverseSpeedMultiplier" sid="617819402594352" type="number" />
                 <instance-variable name="TimeToBeginReverse" sid="106472324651024" type="number" />
+                <instance-variable name="DistMarker" sid="450457683034501" type="number" />
             </instance-variables>
         </family>
         <family name="TargetChoice" plugin-id="Sprite" sid="995886500926932">
@@ -2259,6 +2463,9 @@
         <file name="GasterBlast2.ogg" />
         <file name="UndyneSpeak.ogg" />
         <file name="stabbingspear.ogg" />
+        <file name="ballet_crit.ogg" />
+        <file name="ballet_hit.ogg" />
+        <file name="crit_shriek.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="mus_zz_megalovania.ogg" />
@@ -2297,5 +2504,7 @@
         <file name="sans_bonestab3.csv" />
         <file name="sans_multi3.csv" />
         <file name="sans_final.csv" />
+        <file name="undyne_rotatingspears2.csv" />
+        <file name="undyne_reverse2.csv" />
     </files-folder>
 </c2project>

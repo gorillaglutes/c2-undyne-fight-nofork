@@ -770,7 +770,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>320</x>
-                        <y>352</y>
+                        <y>150</y>
                         <z>0</z>
                         <width>4</width>
                         <height>6</height>
@@ -792,6 +792,15 @@
                         <Stopped>false</Stopped>
                         <Direction>0</Direction>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1226,6 +1235,7 @@
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
                         <TimeToBeginReverse>0.333</TimeToBeginReverse>
+                        <DistMarker>0</DistMarker>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1260,6 +1270,7 @@
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
                         <TimeToBeginReverse>0.333</TimeToBeginReverse>
+                        <DistMarker>0</DistMarker>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1294,6 +1305,7 @@
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
                         <TimeToBeginReverse>0.333</TimeToBeginReverse>
+                        <DistMarker>0</DistMarker>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1328,6 +1340,7 @@
                         <DebugTimer>0</DebugTimer>
                         <ReverseSpeedMultiplier>1</ReverseSpeedMultiplier>
                         <TimeToBeginReverse>0.333</TimeToBeginReverse>
+                        <DistMarker>0</DistMarker>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1355,6 +1368,15 @@
                         <Stopped>false</Stopped>
                         <Direction2>0</Direction2>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1381,6 +1403,15 @@
                         <Stopped>false</Stopped>
                         <Direction2>0</Direction2>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1554,6 +1585,40 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.25</opacity>
+                    </world>
+                </instance>
+                <instance type="Strike2" uid="97">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <crit>0</crit>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Tint">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>340</x>
+                        <y>150</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>220</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

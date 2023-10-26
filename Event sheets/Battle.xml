@@ -777,7 +777,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="442266243902752" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_bonegap1fast&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_rotatingspears2&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="5532933273974015" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -797,7 +797,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="7007070327931486" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_boneslideh&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_reverse2&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="4360530943380891" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -1966,6 +1966,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <variable constant="0" name="min_dist" sid="633846549164845" static="0" type="number">50</variable>
+                <variable constant="0" name="max_dist" sid="551495662179920" static="0" type="number">100</variable>
+                <variable constant="0" name="damage" sid="496361193995231" static="0" type="number">0</variable>
                 <event-block sid="675717496250125">
                     <conditions>
                         <condition id="0" name="On function" sid="668633233808297" type="Function">
@@ -2000,26 +2003,20 @@
                             <param id="2" name="X">CombatZone.BBoxLeft</param>
                             <param id="3" name="Y">320</param>
                         </action>
-                        <action id="2" name="Stop" sid="418857919897603" type="TargetChoice1" />
-                        <action id="-16" name="Wait" sid="538378124752626" type="System">
-                            <param id="0" name="Seconds">0.3</param>
-                        </action>
                         <action id="-3" name="Create object" sid="375921314907611" type="System">
                             <param id="0" name="Object to create">TargetChoice2</param>
                             <param id="1" name="Layer">&quot;CombatZone&quot;</param>
-                            <param id="2" name="X">CombatZone.BBoxLeft</param>
+                            <param id="2" name="X">TargetChoice1.X - round(random(min_dist,max_dist))</param>
                             <param id="3" name="Y">320</param>
-                        </action>
-                        <action id="2" name="Stop" sid="733443786917386" type="TargetChoice2" />
-                        <action id="-16" name="Wait" sid="101163705212302" type="System">
-                            <param id="0" name="Seconds">0.3</param>
                         </action>
                         <action id="-3" name="Create object" sid="980327867414258" type="System">
                             <param id="0" name="Object to create">TargetChoice3</param>
                             <param id="1" name="Layer">&quot;CombatZone&quot;</param>
-                            <param id="2" name="X">CombatZone.BBoxLeft</param>
+                            <param id="2" name="X">TargetChoice2.X - round(random(min_dist,max_dist))</param>
                             <param id="3" name="Y">320</param>
                         </action>
+                        <action id="2" name="Stop" sid="418857919897603" type="TargetChoice1" />
+                        <action id="2" name="Stop" sid="733443786917386" type="TargetChoice2" />
                         <action id="2" name="Stop" sid="251700748205569" type="TargetChoice3" />
                     </actions>
                 </event-block>
@@ -2044,6 +2041,10 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <variable constant="0" name="score" sid="689267191141171" static="0" type="number">0</variable>
+                        <variable constant="0" name="distance1" sid="849210527608146" static="0" type="number">0</variable>
+                        <variable constant="0" name="distance2" sid="524224241931925" static="0" type="number">0</variable>
+                        <variable constant="0" name="distance3" sid="845325130579705" static="0" type="number">0</variable>
                         <event-block sid="736467640873786">
                             <conditions>
                                 <condition id="1" name="Compare parameter" sid="979237153373268" type="Function">
@@ -2101,9 +2102,15 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>im pretty sure that this knife code is inaccessible now but leaving it to not break anything</comment>
                         <event-block sid="606476673919265">
                             <conditions>
                                 <condition id="-22" name="Else" sid="283395304675603" type="System" />
+                                <condition id="-14" name="Compare variable" sid="432993153042767" type="System">
+                                    <param id="0" name="Variable">WeaponType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">WEAPON_KNIFE</param>
+                                </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="187223125247480" type="Target">
@@ -2136,6 +2143,756 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="445996397413703">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="154255658487216" type="System" />
+                                <condition id="-14" name="Compare variable" sid="315501867231345" type="System">
+                                    <param id="0" name="Variable">WeaponType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">WEAPON_BALLET</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="574167857847089" type="System">
+                                    <param id="0" name="Object to create">Strike2</param>
+                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                    <param id="2" name="X">UndyneLegs.X-UndyneLegs.Width/2 - 10 - Strike2.Width/2</param>
+                                    <param id="3" name="Y">UndyneLegs.Y - 246</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="875621790196415" type="Target">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action disabled="1" id="9" name="Set scale" sid="608626512863376" type="Strike2">
+                                    <param id="0" name="Scale">0.75</param>
+                                </action>
+                                <action id="0" name="Play" sid="517325435824968" type="Audio">
+                                    <param id="0" name="Audio file">PlayerFight</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="836656301346267" type="UndyneLegs">
+                                    <param id="0" name="Instance variable">DodgeState</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="296467461524851">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="274777574972087" type="System">
+                                            <param id="0" name="Variable">lastDamage</param>
+                                            <param id="1" name="Value">AT + BALLET_AT - UndyneDEF + random(2)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="626458794714364" type="System">
+                                            <param id="0" name="Variable">distance1</param>
+                                            <param id="1" name="Value">abs(floor((Function.Param(0) - 320) / 10))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="490416885198249" type="System">
+                                            <param id="0" name="Variable">distance2</param>
+                                            <param id="1" name="Value">abs(floor((Function.Param(1) - 320) / 10))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="847602508002714" type="System">
+                                            <param id="0" name="Variable">distance3</param>
+                                            <param id="1" name="Value">abs(floor((Function.Param(2) - 320) / 10))</param>
+                                        </action>
+                                        <action id="14" name="Log" sid="649455947403422" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">distance1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="873299802545081">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="555606485339439" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="998662578256158" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="777056571382996">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="784782508244658" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="478710534916216" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="556461542691146" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">10</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="933266605247878">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="624112050258902" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="190787821975274" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="465000603779121" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">15</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="335455695952213">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="707172818941160" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="706080472644170" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="277619989829822" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="401404088172439">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="618387499342764" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="797278135428569" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="445650338984646" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">40</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="696272340438023">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="399743163434843" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="852381299720782" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="572260924896664" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="123367577985630">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="158628801398566" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="298842706173737" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="356732405977013" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">70</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="599854520721417">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="608213292394923" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="580903146595572" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="642990237951967" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">80</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="521634498650380">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="558486675988241" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="655653796988047" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="918518518846184" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">90</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="421721865265586">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="171721452383706" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="583428778585657" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">110</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="636441400279334">
+                                            <conditions />
+                                            <actions>
+                                                <action id="14" name="Log" sid="116474983127556" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;score:&quot;</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="431314343925887" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">score</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="600153406562028">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="910003113371043" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="702149692236765" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="275725613786748">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="796777826691332" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="592315506804880" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="405300191521949" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">10</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="916500819326300">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="535515939349021" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="864475175923448" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="845939116129022" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">15</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="567012871455974">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="555546782121517" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="109559020554478" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="474003664515429" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="980058489909814">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="628377853466387" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="681499969778628" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="189981902399868" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">40</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="486145255968903">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="109632391615636" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="511473584375934" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="311542316540796" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="441339626638393">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="110031061918526" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="801372910626152" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="171070623724976" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">70</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="217391852333382">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="636361164985784" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="718205084768008" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="455119454116926" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">80</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="503808190354795">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="773477703012551" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="872998817295472" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="946298815092967" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">90</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="995316978132190">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="372258760423096" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="714779932625514" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">110</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="497661407216517">
+                                            <conditions />
+                                            <actions>
+                                                <action id="14" name="Log" sid="107482120374474" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">score</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="606893841112105">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="123471200096697" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="926705190052888" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="139896137235130">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="955387473050217" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="935695300258511" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">28</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="902515629453325" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">10</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="514581800005406">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="399133144837795" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="617853217756482" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">22</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="665546504881544" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">15</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="501837265693920">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="266234000678170" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="575002000352009" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">16</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="439525992542991" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">20</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="516873164487179">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="729765910046431" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="192229116710059" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="417931349972951" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">40</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="332033788033010">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="915031682967031" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="680549994734537" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="816433654460714" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="641080057145854">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="639503095035294" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="193020926798155" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="301591271435512" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">70</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="892857614283999">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="188832282831288" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="916140045815194" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="162590426882636" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">80</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="308398505370949">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="609815708650663" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="623079896391196" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="711158664104601" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">90</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="900433854883969">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="365927881167923" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="342941560674835" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">110</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="874056831208873">
+                                            <conditions />
+                                            <actions>
+                                                <action id="14" name="Log" sid="755382195281476" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">score</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="810254732682890">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="215676225850515" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">430</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="202964480850650" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">score * 1.8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="174472861960786">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="670288343604977" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">400</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="481091946895211" type="System">
+                                                    <param id="0" name="Variable">score</param>
+                                                    <param id="1" name="Value">score * 1.25</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="645530980640977">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="890160109499366" type="System">
+                                                    <param id="0" name="Variable">lastDamage</param>
+                                                    <param id="1" name="Value">21 * round((((AT + BALLET_AT) - UndyneDEF) + random(2)) * (score/160) * (4/3))</param>
+                                                </action>
+                                                <action disabled="1" id="14" name="Log" sid="823010686662223" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">lastDamage</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="149340878375350">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="461605903203170" type="System">
+                                                            <param id="0" name="Variable">lastDamage</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Value">600</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="554214306450143" type="System">
+                                                            <param id="0" name="Variable">lastDamage</param>
+                                                            <param id="1" name="Value">round(random(600, 666))</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="406653051511653">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="14" name="Log" sid="807230243324455" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">&quot;damage:&quot;</param>
+                                                        </action>
+                                                        <action id="14" name="Log" sid="799072998533878" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">lastDamage</param>
+                                                        </action>
+                                                        <action id="14" name="Log" sid="665929135140621" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">distance1</param>
+                                                        </action>
+                                                        <action id="14" name="Log" sid="415176162879618" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">distance2</param>
+                                                        </action>
+                                                        <action id="14" name="Log" sid="394832095569617" type="Browser">
+                                                            <param id="0" name="Type">0</param>
+                                                            <param id="1" name="Message">distance3</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2367,6 +3124,8 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="center" sid="336252651613029" static="0" type="number">320</variable>
+                        <variable constant="0" name="critRange" sid="728189810415201" static="0" type="number">12</variable>
                         <event-block sid="161006954446258">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="749024949443668" type="Target">
@@ -2428,19 +3187,93 @@
                                                     <param id="2" name="Value">VPad.LastConfirm</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="745517286959424" type="System">
-                                                    <param id="0" name="Variable">one</param>
-                                                    <param id="1" name="Value">TargetChoice1.X</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="905951114265089" type="TargetChoice1">
-                                                    <param id="0" name="Instance variable">Stopped</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="241979145814400" type="TargetChoice1">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="449515940800987">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="745517286959424" type="System">
+                                                            <param id="0" name="Variable">one</param>
+                                                            <param id="1" name="Value">TargetChoice1.X</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="335180319016410" type="TargetChoice1">
+                                                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="850146910363110" type="TargetChoice1">
+                                                            <param id="0" name="Speed">30</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="905951114265089" type="TargetChoice1">
+                                                            <param id="0" name="Instance variable">Stopped</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="241979145814400" type="TargetChoice1">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="642080302790494">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="827543985485873" type="System">
+                                                            <param id="0" name="Variable">critRange</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">abs(TargetChoice1.X - 320)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="129310591734236" type="Audio">
+                                                            <param id="0" name="Audio file">ballet_crit</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="128464059171080" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">99</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="191219784328637" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">97</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="224229666644434" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">46</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="914025599183129">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="610075748259857" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="323489706582671" type="Audio">
+                                                            <param id="0" name="Audio file">ballet_hit</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="2" name="Stop" sid="349789181333076" type="TargetChoice1" />
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="946827546790625" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="425381975440643" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="852851627538920" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2490,6 +3323,10 @@
                                                 <action id="-16" name="Set opacity" sid="721406370448994" type="TargetChoice2">
                                                     <param id="0" name="Opacity">TargetChoice2.Opacity - dt*250 * fademod</param>
                                                 </action>
+                                                <action id="-13" name="Set boolean" sid="241427598758379" type="TargetChoice2">
+                                                    <param id="0" name="Instance variable">Stopped</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                         <event-block sid="972842494375514">
@@ -2501,25 +3338,104 @@
                                                     <param id="2" name="Value">VPad.LastConfirm</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="184407917705631" type="System">
-                                                    <param id="0" name="Variable">two</param>
-                                                    <param id="1" name="Value">TargetChoice2.X</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="241427598758379" type="TargetChoice2">
-                                                    <param id="0" name="Instance variable">Stopped</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                                <action id="-16" name="Set opacity" sid="828551069875054" type="TargetChoice2">
-                                                    <param id="0" name="Opacity">100</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="357398986750974">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="184407917705631" type="System">
+                                                            <param id="0" name="Variable">two</param>
+                                                            <param id="1" name="Value">TargetChoice2.X</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="113185410842144" type="TargetChoice2">
+                                                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="114588975502455" type="TargetChoice2">
+                                                            <param id="0" name="Speed">30</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="947166161071556" type="TargetChoice2">
+                                                            <param id="0" name="Instance variable">Stopped</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="828551069875054" type="TargetChoice2">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="805382490000264">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="619131845886948" type="System">
+                                                            <param id="0" name="Variable">critRange</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">abs(TargetChoice2.X - 320)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="694002152521273" type="Audio">
+                                                            <param id="0" name="Audio file">ballet_crit</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="147049859682142" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">99</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="391571795918915" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">97</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="613854129476453" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">46</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="515646335282902">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="567251615736935" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="432543521674320" type="Audio">
+                                                            <param id="0" name="Audio file">ballet_hit</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="2" name="Stop" sid="457824804744002" type="TargetChoice2" />
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="258686623014686" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="687667485919905" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="767878525664938" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="816628730671436">
                                     <conditions>
                                         <condition id="-22" name="Else" sid="698096909240553" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="840610709491651" type="System">
+                                            <param id="0" name="Variable">three</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="4" name="Set animation" sid="795821296531888" type="TargetChoice3">
@@ -2572,16 +3488,124 @@
                                                     <param id="2" name="Value">VPad.LastConfirm</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="877027669400159" type="System">
-                                                    <param id="0" name="Variable">three</param>
-                                                    <param id="1" name="Value">TargetChoice3.X</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="587170115295591" type="TargetChoice3">
-                                                    <param id="0" name="Instance variable">Stopped</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="550521909862658">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="877027669400159" type="System">
+                                                            <param id="0" name="Variable">three</param>
+                                                            <param id="1" name="Value">TargetChoice3.X</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="136749300239455" type="TargetChoice3">
+                                                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="6" name="Set speed" sid="530491225534933" type="TargetChoice3">
+                                                            <param id="0" name="Speed">30</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="587170115295591" type="TargetChoice3">
+                                                            <param id="0" name="Instance variable">Stopped</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-16" name="Set opacity" sid="554457490858907" type="TargetChoice3">
+                                                            <param id="0" name="Opacity">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="901332226607132">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="297652569148335" type="System">
+                                                            <param id="0" name="Variable">critRange</param>
+                                                            <param id="1" name="Comparison">4</param>
+                                                            <param id="2" name="Value">abs(TargetChoice3.X - 320)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="317158626185270" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">99</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="504498790374467" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">97</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="914720552169683" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">46</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="543226887248183">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="950148096469492" type="System">
+                                                                    <param id="0" name="Variable">critRange</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Value">abs(one - 320)</param>
+                                                                </condition>
+                                                                <condition id="-14" name="Compare variable" sid="839569949906454" type="System">
+                                                                    <param id="0" name="Variable">critRange</param>
+                                                                    <param id="1" name="Comparison">5</param>
+                                                                    <param id="2" name="Value">abs(two - 320)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="162774921989255" type="Audio">
+                                                                    <param id="0" name="Audio file">crit_shriek</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="818005392720735">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="270674691472826" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Play" sid="532152754446134" type="Audio">
+                                                                    <param id="0" name="Audio file">ballet_crit</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="171321324729879">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="752322453269281" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="152360075764917" type="Audio">
+                                                            <param id="0" name="Audio file">ballet_hit</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="2" name="Stop" sid="289219731589805" type="TargetChoice3" />
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="849120451771327" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">0</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="539571422437447" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">1</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                        <action disabled="1" id="-28" name="Set effect parameter" sid="923307647503424" type="Strike2">
+                                                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                            <param id="1" name="Parameter index">2</param>
+                                                            <param id="2" name="Value">100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -2732,11 +3756,11 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="867650795282880" type="TargetChoice3" />
                                         <action id="0" name="Call function" sid="127048545738163" type="Function">
                                             <param id="0" name="Name">&quot;UndyneDamage&quot;</param>
                                             <param id="1" name="Parameter {n}">one{###}two{###}three</param>
                                         </action>
+                                        <action id="-9" name="Destroy" sid="867650795282880" type="TargetChoice3" />
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -2818,6 +3842,66 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="1115858108333321" type="Strike" />
                         <action id="0" name="Call function" sid="339902109767109" type="Function">
+                            <param id="0" name="Name">&quot;SansAnimation&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Hurt&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="868895509785062">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="384887810090586" type="Strike2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                        <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="182275367549423" type="TargetChoice3">
+                            <param id="0" name="Instance variable">Stopped</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="861391672370547" type="Strike2" />
+                        <action id="-9" name="Set value" sid="210388572177157" type="System">
+                            <param id="0" name="Variable">UndyneLastHP</param>
+                            <param id="1" name="Value">UndyneHP</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="679827499236482" type="System">
+                            <param id="0" name="Variable">UndyneHP</param>
+                            <param id="1" name="Value">UndyneHP - lastDamage</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="111612688563127" type="System">
+                            <param id="0" name="Seconds">0.6</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="478823072639260" type="System">
+                            <param id="0" name="Object to create">DamageFont</param>
+                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                            <param id="2" name="X">240</param>
+                            <param id="3" name="Y">136</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="632709401490374" type="UndyneHPBackground">
+                            <param id="0" name="Instance variable">Timeout</param>
+                            <param id="1" name="Value">1.25</param>
+                        </action>
+                        <action id="0" name="Set text" sid="797577256680661" type="DamageFont">
+                            <param id="0" name="Text">str(lastDamage)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="791762549619918" type="DamageFont">
+                            <param id="0" name="Instance variable">Timeout</param>
+                            <param id="1" name="Value">1.25</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="131990716984923" type="DamageFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">100</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="401261708324416" type="DamageFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">1</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="954127536110897" type="DamageFont">
+                            <param id="0" name="Effect">&quot;Tint&quot;</param>
+                            <param id="1" name="Parameter index">2</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="262010855729618" type="Function">
                             <param id="0" name="Name">&quot;SansAnimation&quot;</param>
                             <param id="1" name="Parameter {n}">&quot;Hurt&quot;</param>
                         </action>
@@ -2928,7 +4012,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="3340722237681074" type="DefaultFont">
+                                <action disabled="1" id="-10" name="Set value" sid="3340722237681074" type="DefaultFont">
                                     <param id="0" name="Instance variable">EndFunc</param>
                                     <param id="1" name="Value">&quot;MenuCheckSans2&quot;</param>
                                 </action>
@@ -2961,7 +4045,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="7697488528991464" type="DefaultFont">
                             <param id="0" name="Instance variable">FullText</param>
-                            <param id="1" name="Value">&quot;* Can&apos;t keep dodging forever.&quot; &amp; newline &amp; &quot;* Keep attacking.&quot;</param>
+                            <param id="1" name="Value">&quot;* UNDYNE THE UNDYING 99 ATK 99 DEF&quot; &amp; newline &amp; &quot;* Heroine reformed her own&quot; &amp; newline &amp; &quot;  DETERMINATION to save Earth.&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="1065982881486434" type="DefaultFont">
                             <param id="0" name="Instance variable">Name</param>
@@ -5375,6 +6459,7 @@
                 <variable constant="1" name="MAXLIFE" sid="685293532534871" static="0" type="number">5</variable>
                 <variable constant="1" name="OPMOD" sid="104016717629225" static="0" type="number">2.5</variable>
                 <variable constant="1" name="DTOffset" sid="417474945224670" static="0" type="number">60</variable>
+                <variable constant="0" name="finalTime" sid="301502501926585" static="0" type="number">0.1</variable>
                 <variable constant="0" name="InitialReverseDistance" sid="218878974819584" static="0" type="number">50</variable>
                 <variable constant="0" name="LastBlock" sid="220003267570582" static="0" type="number">0</variable>
                 <event-group description="" sid="818485607220486" title="Arrow">
@@ -5796,8 +6881,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-2" name="Set Y" sid="951584150116398" type="RArrowSprite">
+                                                <action disabled="1" id="-2" name="Set Y" sid="951584150116398" type="RArrowSprite">
                                                     <param id="0" name="Y">RArrowSprite.Y - sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="857121318848042" type="RArrowSprite">
+                                                    <param id="0" name="Y">PlayerHitbox.Y - (RArrowSprite.DistMarker) + (RArrowSprite.DistMarker * (time - RArrowSprite.timeMarker)/finalTime)</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="232948855191314" type="RArrowSprite">
                                                     <param id="0" name="X">PlayerHitbox.X</param>
@@ -5841,6 +6929,14 @@
                                                             <param id="0" name="Instance variable">BegunFinal</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="302974248759048" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="694570193127715" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">DistMarker</param>
+                                                            <param id="1" name="Value">abs(RArrowSprite.Y - PlayerHitbox.Y)</param>
+                                                        </action>
                                                         <action id="11" name="Set collisions enabled" sid="820439770966110" type="RArrowSprite">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
@@ -5860,17 +6956,20 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-2" name="Set Y" sid="498765429738268" type="RArrowSprite">
+                                                <action disabled="1" id="-2" name="Set Y" sid="498765429738268" type="RArrowSprite">
                                                     <param id="0" name="Y">RArrowSprite.Y + sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="519097471344960" type="RArrowSprite">
+                                                    <param id="0" name="Y">UStartLoc.Y-(( UStartLoc.Y - PlayerHitbox.Y - InitialReverseDistance)*(time-RArrowSprite.TimeMarker)/(RArrowSprite.TimeToBeginReverse))</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="645915071944257" type="RArrowSprite">
                                                     <param id="0" name="X">RArrowSprite.X + cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="631018385993145">
+                                                <event-block disabled="1" sid="631018385993145">
                                                     <conditions>
-                                                        <condition id="-2" name="Compare Y" sid="477019896949246" type="RArrowSprite">
+                                                        <condition disabled="1" id="-2" name="Compare Y" sid="477019896949246" type="RArrowSprite">
                                                             <param id="0" name="Comparison">2</param>
                                                             <param id="1" name="Y co-ordinate">PlayerHitbox.Y+InitialReverseDistance</param>
                                                         </condition>
@@ -5902,8 +7001,11 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-2" name="Set Y" sid="553222692703223" type="RArrowSprite">
+                                                <action disabled="1" id="-2" name="Set Y" sid="553222692703223" type="RArrowSprite">
                                                     <param id="0" name="Y">RArrowSprite.Y - sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="723630687685830" type="RArrowSprite">
+                                                    <param id="0" name="Y">PlayerHitbox.Y + (RArrowSprite.DistMarker) - (RArrowSprite.DistMarker * (time - RArrowSprite.timeMarker)/finalTime)</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="594305979237739" type="RArrowSprite">
                                                     <param id="0" name="X">PlayerHitbox.X</param>
@@ -5947,6 +7049,14 @@
                                                             <param id="0" name="Instance variable">BegunFinal</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="543247593669186" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="941071487499099" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">DistMarker</param>
+                                                            <param id="1" name="Value">abs(RArrowSprite.Y - PlayerHitbox.Y)</param>
+                                                        </action>
                                                         <action id="11" name="Set collisions enabled" sid="839232138456908" type="RArrowSprite">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
@@ -5961,15 +7071,15 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-2" name="Set Y" sid="971117634165787" type="RArrowSprite">
-                                                    <param id="0" name="Y">RArrowSprite.Y + sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                <action id="-2" name="Set Y" sid="714501293372118" type="RArrowSprite">
+                                                    <param id="0" name="Y">DStartLoc.Y+(( PlayerHitbox.Y - DStartLoc.Y- InitialReverseDistance)*(time-RArrowSprite.TimeMarker)/(RArrowSprite.TimeToBeginReverse))</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="408257892131123" type="RArrowSprite">
                                                     <param id="0" name="X">RArrowSprite.X + cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="185883889482980">
+                                                <event-block disabled="1" sid="185883889482980">
                                                     <conditions>
                                                         <condition id="-2" name="Compare Y" sid="244789089430851" type="RArrowSprite">
                                                             <param id="0" name="Comparison">4</param>
@@ -6003,8 +7113,8 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-1" name="Set X" sid="599481227312803" type="RArrowSprite">
-                                                    <param id="0" name="X">RArrowSprite.X - cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                <action id="-1" name="Set X" sid="794023822044679" type="RArrowSprite">
+                                                    <param id="0" name="X">PlayerHitbox.X - (RArrowSprite.DistMarker) + (RArrowSprite.DistMarker * (time - RArrowSprite.timeMarker)/finalTime)</param>
                                                 </action>
                                                 <action id="-2" name="Set Y" sid="962906192367377" type="RArrowSprite">
                                                     <param id="0" name="Y">PlayerHitbox.Y</param>
@@ -6048,6 +7158,14 @@
                                                             <param id="0" name="Instance variable">BegunFinal</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="125575622299117" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="259326087067008" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">DistMarker</param>
+                                                            <param id="1" name="Value">abs(RArrowSprite.X - PlayerHitbox.X)</param>
+                                                        </action>
                                                         <action id="11" name="Set collisions enabled" sid="689282212296334" type="RArrowSprite">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
@@ -6065,12 +7183,15 @@
                                                 <action id="-2" name="Set Y" sid="758995127526632" type="RArrowSprite">
                                                     <param id="0" name="Y">RArrowSprite.Y + sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
                                                 </action>
+                                                <action id="-1" name="Set X" sid="696510688816960" type="RArrowSprite">
+                                                    <param id="0" name="X">LStartLoc.X-(( LStartLoc.X-PlayerHitbox.X - InitialReverseDistance)*(time-RArrowSprite.TimeMarker)/(RArrowSprite.TimeToBeginReverse))</param>
+                                                </action>
                                                 <action id="-1" name="Set X" sid="882238891806516" type="RArrowSprite">
                                                     <param id="0" name="X">RArrowSprite.X + cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="404362876190426">
+                                                <event-block disabled="1" sid="404362876190426">
                                                     <conditions>
                                                         <condition id="-1" name="Compare X" sid="873638841394785" type="RArrowSprite">
                                                             <param id="0" name="Comparison">2</param>
@@ -6105,7 +7226,7 @@
                                             </conditions>
                                             <actions>
                                                 <action id="-1" name="Set X" sid="614321527918171" type="RArrowSprite">
-                                                    <param id="0" name="X">RArrowSprite.X - cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                    <param id="0" name="X">PlayerHitbox.X + (RArrowSprite.DistMarker) - (RArrowSprite.DistMarker * (time - RArrowSprite.timeMarker)/finalTime)</param>
                                                 </action>
                                                 <action id="-2" name="Set Y" sid="397259411416412" type="RArrowSprite">
                                                     <param id="0" name="Y">PlayerHitbox.Y</param>
@@ -6149,6 +7270,14 @@
                                                             <param id="0" name="Instance variable">BegunFinal</param>
                                                             <param id="1" name="Value">1</param>
                                                         </action>
+                                                        <action id="-10" name="Set value" sid="839306641810598" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                                            <param id="1" name="Value">time</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="627123458046455" type="RArrowSprite">
+                                                            <param id="0" name="Instance variable">DistMarker</param>
+                                                            <param id="1" name="Value">abs(RArrowSprite.X - PlayerHitbox.X)</param>
+                                                        </action>
                                                         <action id="11" name="Set collisions enabled" sid="264044089771067" type="RArrowSprite">
                                                             <param id="0" name="Collisions">1</param>
                                                         </action>
@@ -6167,14 +7296,14 @@
                                                     <param id="0" name="Y">RArrowSprite.Y + sin(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
                                                 </action>
                                                 <action id="-1" name="Set X" sid="899088811792661" type="RArrowSprite">
-                                                    <param id="0" name="X">RArrowSprite.X + cos(RArrowSprite.Direction*90)*(dt)*RArrowSprite.Speed</param>
+                                                    <param id="0" name="X">RStartLoc.X+((PlayerHitbox.X - InitialReverseDistance - RStartLoc.X)*(time-RArrowSprite.TimeMarker)/(RArrowSprite.TimeToBeginReverse))</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="826399030909244">
+                                                <event-block disabled="1" sid="826399030909244">
                                                     <conditions>
                                                         <condition id="-1" name="Compare X" sid="512086991717150" type="RArrowSprite">
-                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="0" name="Comparison">5</param>
                                                             <param id="1" name="X co-ordinate">PlayerHitbox.X-InitialReverseDistance</param>
                                                         </condition>
                                                     </conditions>
@@ -9200,6 +10329,7 @@
         <event-group description="" sid="5205752066196878" title="CombatZone">
             <sub-events>
                 <variable constant="0" name="ResizeSpeed" sid="3111584688851152" static="1" type="number">480</variable>
+                <variable constant="0" name="opaque" sid="637741936896542" static="1" type="number">1</variable>
                 <variable constant="0" name="EndResize" sid="1052618449272991" static="1" type="text"></variable>
                 <event-block sid="1994005836547195">
                     <conditions>
@@ -9345,6 +10475,32 @@
                         </action>
                         <action id="-15" name="Set visible" sid="9393039340572411" type="CombatZone">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="499844734978550">
+                    <conditions>
+                        <condition id="0" name="On function" sid="510886053076265" type="Function">
+                            <param id="0" name="Name">&quot;CombatZoneMakeOpaque&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="653939535952772" type="System">
+                            <param id="0" name="Variable">opaque</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869894127470296">
+                    <conditions>
+                        <condition id="0" name="On function" sid="431321788870536" type="Function">
+                            <param id="0" name="Name">&quot;CombatZoneMakeTransparent&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="370523155898136" type="System">
+                            <param id="0" name="Variable">opaque</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -9791,11 +10947,130 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="744713945287296">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="481372299079561" type="System">
+                                    <param id="0" name="Variable">opaque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="772695584279829" type="CombatZoneTransparency">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="134370271029749">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="705741804510720" type="System">
+                                    <param id="0" name="Variable">opaque</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="894759191815443" type="CombatZoneTransparency">
+                                    <param id="0" name="X">CombatZone.X</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="506031547983786" type="CombatZoneTransparency">
+                                    <param id="0" name="Y">CombatZone.Y</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="736644339230461" type="CombatZoneTransparency">
+                                    <param id="0" name="Width">CombatZone.width</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="412070146862892" type="CombatZoneTransparency">
+                                    <param id="0" name="Height">CombatZone.height</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="747783277794673" type="CombatZoneTransparency">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="7849474356685905" title="SansAnimation">
             <sub-events>
+                <event-block sid="885756504079003">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="632512069085085" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="197432924973977">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="481927815128008" type="UndyneHPBackground">
+                                    <param id="0" name="Instance variable">Timeout</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="307712581091723" type="UndyneHPBackground">
+                                    <param id="0" name="Instance variable">Timeout</param>
+                                    <param id="1" name="Value">min(dt, UndyneHPBackground.Timeout)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="948237942227090" type="UndyneHPBackground">
+                                    <param id="0" name="X">200</param>
+                                    <param id="1" name="Y">172</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="374032231572608" type="UndyneHPBackgroundBorder">
+                                    <param id="0" name="X">UndyneHPBackground.X - 1</param>
+                                    <param id="1" name="Y">UndyneHPBackground.Y - 1</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="673905516083040" type="UndyneHPBackgroundBorder">
+                                    <param id="0" name="Width">UndyneHPBackground.Width + 2</param>
+                                    <param id="1" name="Height">UndyneHPBackground.Height + 2</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="122176116261471" type="UndyneHPBar">
+                                    <param id="0" name="X">UndyneHPBackground.X</param>
+                                    <param id="1" name="Y">UndyneHPBackground.Y</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="589282019089761">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="719303125942048" type="UndyneHPBackground">
+                                            <param id="0" name="Instance variable">Timeout</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">UndyneHPBackground.TimeBetweenEnd</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="993878719766694" type="UndyneHPBar">
+                                            <param id="0" name="Width">((UndyneHPBackground.Timeout- UndyneHPBackground.TimeBetweenEnd) / (1.25 - UndyneHPBackground.TimeBetweenEnd)) * ((UndyneLastHP - UndyneHP) / UndyneMaxHP) * UndyneHPBackground.Width + (UndyneHP / UndyneMaxHP) * UndyneHPBackground.Width</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="592932736127547">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="902819666309108" type="UndyneHPBackground">
+                                    <param id="0" name="Instance variable">Timeout</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="291668015479651" type="UndyneHPBackground">
+                                    <param id="0" name="Y">512</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="642345419306044" type="UndyneHPBackgroundBorder">
+                                    <param id="0" name="X">UndyneHPBackground.X - 1</param>
+                                    <param id="1" name="Y">UndyneHPBackground.Y - 1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="671287054577636" type="UndyneHPBar">
+                                    <param id="0" name="X">UndyneHPBackground.X</param>
+                                    <param id="1" name="Y">UndyneHPBackground.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <variable constant="0" name="OpacityRate" sid="770241530744747" static="0" type="number">10</variable>
                 <variable constant="0" name="set_mode" sid="192866182829096" static="1" type="number">-1</variable>
                 <variable constant="0" name="RotMod" sid="589897949698369" static="0" type="number">1000</variable>
@@ -9839,7 +11114,11 @@
                             <param id="0" name="Instance variable">TargetAngle</param>
                             <param id="1" name="Value">290</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="930532362241231" type="UndyneRightArm" />
+                        <action disabled="1" id="-24" name="Move to top" sid="930532362241231" type="UndyneRightArm" />
+                        <action id="-15" name="Set visible" sid="875407450265321" type="UndyneSpearTip">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="476712557394884" type="CombatZone" />
                         <action id="-3" name="Create object" sid="151123239949688" type="System">
                             <param id="0" name="Object to create">UndyneSlash</param>
                             <param id="1" name="Layer">5</param>
@@ -9905,7 +11184,10 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-16" name="Wait" sid="725820146726910" type="System">
-                            <param id="0" name="Seconds">0.2</param>
+                            <param id="0" name="Seconds">0.1333</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="251188274824753" type="UndyneSpearTip">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="851973259984810" type="System">
                             <param id="0" name="Variable">SansAnimation</param>
@@ -10249,37 +11531,6 @@
                                     <param id="0" name="Instance variable">DodgeTimer</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-16" name="Wait" sid="6865508873045757" type="System">
-                                    <param id="0" name="Seconds">0.6</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="707221204131991" type="System">
-                                    <param id="0" name="Object to create">DamageFont</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="X">272</param>
-                                    <param id="3" name="Y">76</param>
-                                </action>
-                                <action id="0" name="Set text" sid="863921277443162" type="DamageFont">
-                                    <param id="0" name="Text">&quot;999&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="139455874858103" type="DamageFont">
-                                    <param id="0" name="Instance variable">Timeout</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="462875921742234" type="DamageFont">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">100</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="590668265506460" type="DamageFont">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="211965177178178" type="DamageFont">
-                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">0</param>
-                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -10338,8 +11589,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="-1" name="Set X" sid="4281191975672167" type="UndyneLegs">
+                                <action id="-1" name="Set X" sid="4281191975672167" type="UndyneLegs">
                                     <param id="0" name="X">320</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="490688954886903" type="UndyneLegs">
+                                    <param id="0" name="Instance variable">XOffset</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="777498200450079" type="UndyneLegs">
                                     <param id="0" name="Instance variable">DodgeState</param>
@@ -10774,10 +12029,15 @@
                                     <param id="0" name="Instance variable">TimeMarker</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="516290484818657" type="UndyneLegs">
+                                    <param id="0" name="Instance variable">XOffset</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="655591847903613">
                             <conditions>
+                                <condition id="-22" name="Else" sid="561064714823490" type="System" />
                                 <condition id="-7" name="Compare instance variable" sid="374204358789056" type="UndyneLegs">
                                     <param id="0" name="Instance variable">T</param>
                                     <param id="1" name="Comparison">4</param>
@@ -10791,7 +12051,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="475300980815526" type="UndyneLegs">
                                     <param id="0" name="Instance variable">XOffset</param>
-                                    <param id="1" name="Value">sign * amplitude * (UndyneLegs.TimeMarker + 1 - time)</param>
+                                    <param id="1" name="Value">sign * amplitude *  ((1 - (time - UndyneLegs.TimeMarker)))</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="316560011219871" type="System">
                                     <param id="0" name="Variable">sign</param>
@@ -11118,6 +12378,35 @@
                             <param id="0" name="Y">UndyneTorso.ImagePointY(&quot;Head&quot;)</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="866958338325642">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="493647377279420" type="System" />
+                        <condition id="-14" name="Compare variable" sid="920399154325342" type="System">
+                            <param id="0" name="Variable">SansAnimation</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ArmSwing&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="219572814205941">
+                            <conditions>
+                                <condition id="-9" name="Is visible" sid="913022643153080" type="UndyneSpearTip" />
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="309546709691104" type="UndyneSpearTip">
+                                    <param id="0" name="X">UndyneRightArm.X</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="467171499558452" type="UndyneSpearTip">
+                                    <param id="0" name="Y">UndyneRightArm.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="329966343351540" type="UndyneSpearTip">
+                                    <param id="0" name="Angle">UndyneRightArm.Angle</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="1491824254613754">
                     <conditions>
