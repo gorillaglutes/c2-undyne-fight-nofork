@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1697035072,
+	"version": 1698355088,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -25,6 +25,10 @@
 		"images/combatzoneunclipper.png",
 		"images/undynehpbackground.png",
 		"images/undynehpbar.png",
+		"images/strike2-sheet0.png",
+		"images/strike2-sheet1.png",
+		"images/strike2-sheet2.png",
+		"images/undynehpbackgroundborder.png",
 		"images/undynehead-sheet0.png",
 		"images/undyneleftarm-sheet0.png",
 		"images/undynelegs-sheet0.png",
@@ -36,6 +40,7 @@
 		"images/undynehair-sheet0.png",
 		"images/undynewaist-sheet0.png",
 		"images/eyebeam-sheet0.png",
+		"images/undynespeartip-sheet0.png",
 		"images/boneh.png",
 		"images/bonev.png",
 		"images/gasterblaster-sheet0.png",
@@ -90,6 +95,7 @@
 		"images/stabbingspear-sheet0.png",
 		"images/sprite2-sheet0.png",
 		"images/rotatingspear-sheet0.png",
+		"images/combatzonetransparency.png",
 		"media/ding.ogg",
 		"media/playerfight.ogg",
 		"media/playerdamaged.ogg",
@@ -109,6 +115,9 @@
 		"media/gasterblast2.ogg",
 		"media/undynespeak.ogg",
 		"media/stabbingspear.ogg",
+		"media/ballet_crit.ogg",
+		"media/ballet_hit.ogg",
+		"media/crit_shriek.ogg",
 		"media/mus_zz_megalovania.ogg",
 		"media/mus_zz_battleagainstatruehero.ogg",
 		"icon-16.png",
@@ -140,6 +149,8 @@
 		"sans_randomblaster2.csv",
 		"sans_bonestab3.csv",
 		"sans_multi3.csv",
-		"sans_final.csv"
+		"sans_final.csv",
+		"undyne_rotatingspears2.csv",
+		"undyne_reverse2.csv"
 	]
 }
