@@ -235,6 +235,10 @@
                                     <param id="0" name="Instance variable">Name</param>
                                     <param id="1" name="Value">&quot;Error&quot;</param>
                                 </action>
+                                <action id="14" name="Log" sid="452619665385935" type="Browser">
+                                    <param id="0" name="Type">0</param>
+                                    <param id="1" name="Message">&quot;ERROR PANIC FUNC CALLED&quot;</param>
+                                </action>
                                 <action id="-10" name="Set value" sid="523605850548551" type="BattleFont">
                                     <param id="0" name="Instance variable">Timeout</param>
                                     <param id="1" name="Value">3</param>
@@ -2068,30 +2072,30 @@
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Value">2</param>
                                 </action>
-                                <action id="-3" name="Create object" sid="597762130963375" type="System">
+                                <action disabled="1" id="-3" name="Create object" sid="597762130963375" type="System">
                                     <param id="0" name="Object to create">DamageFont</param>
                                     <param id="1" name="Layer">&quot;Enemies&quot;</param>
                                     <param id="2" name="X">272</param>
                                     <param id="3" name="Y">76</param>
                                 </action>
-                                <action id="0" name="Set text" sid="511400871782829" type="DamageFont">
+                                <action disabled="1" id="0" name="Set text" sid="511400871782829" type="DamageFont">
                                     <param id="0" name="Text">&quot;MISS&quot;</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="643629394996690" type="DamageFont">
+                                <action disabled="1" id="-10" name="Set value" sid="643629394996690" type="DamageFont">
                                     <param id="0" name="Instance variable">Timeout</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="694775597071750" type="DamageFont">
+                                <action disabled="1" id="-28" name="Set effect parameter" sid="694775597071750" type="DamageFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">0</param>
                                     <param id="2" name="Value">75</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="520445882178398" type="DamageFont">
+                                <action disabled="1" id="-28" name="Set effect parameter" sid="520445882178398" type="DamageFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">1</param>
                                     <param id="2" name="Value">75</param>
                                 </action>
-                                <action id="-28" name="Set effect parameter" sid="809821890877179" type="DamageFont">
+                                <action disabled="1" id="-28" name="Set effect parameter" sid="809821890877179" type="DamageFont">
                                     <param id="0" name="Effect">&quot;Tint&quot;</param>
                                     <param id="1" name="Parameter index">2</param>
                                     <param id="2" name="Value">75</param>
@@ -2154,12 +2158,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Create object" sid="574167857847089" type="System">
-                                    <param id="0" name="Object to create">Strike2</param>
-                                    <param id="1" name="Layer">&quot;Enemies&quot;</param>
-                                    <param id="2" name="X">UndyneLegs.X-UndyneLegs.Width/2 - 10 - Strike2.Width/2</param>
-                                    <param id="3" name="Y">UndyneLegs.Y - 246</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="875621790196415" type="Target">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Value">1</param>
@@ -2198,12 +2196,54 @@
                                             <param id="0" name="Variable">distance3</param>
                                             <param id="1" name="Value">abs(floor((Function.Param(2) - 320) / 10))</param>
                                         </action>
+                                        <action id="-3" name="Create object" sid="574167857847089" type="System">
+                                            <param id="0" name="Object to create">Strike2</param>
+                                            <param id="1" name="Layer">&quot;Enemies&quot;</param>
+                                            <param id="2" name="X">UndyneLegs.X-UndyneLegs.Width/2 - 10 - Strike2.Width/2</param>
+                                            <param id="3" name="Y">UndyneLegs.Y - 246</param>
+                                        </action>
                                         <action id="14" name="Log" sid="649455947403422" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">distance1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="106398377931632">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="150891836944419" type="System">
+                                                    <param id="0" name="Variable">distance1</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="371574588435936" type="System">
+                                                    <param id="0" name="Variable">distance2</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="571545022042902" type="System">
+                                                    <param id="0" name="Variable">distance3</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">12</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-28" name="Set effect parameter" sid="908103481589188" type="Strike2">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">0</param>
+                                                    <param id="2" name="Value">99</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="619264224247260" type="Strike2">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">1</param>
+                                                    <param id="2" name="Value">97</param>
+                                                </action>
+                                                <action id="-28" name="Set effect parameter" sid="190472606838656" type="Strike2">
+                                                    <param id="0" name="Effect">&quot;Tint&quot;</param>
+                                                    <param id="1" name="Parameter index">2</param>
+                                                    <param id="2" name="Value">46</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="873299802545081">
                                             <conditions>
                                                 <condition id="-14" name="Compare variable" sid="555606485339439" type="System">
@@ -2887,6 +2927,16 @@
                                                             <param id="1" name="Message">distance3</param>
                                                         </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="880992284109791">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="2" name="Call expression" sid="939221963581139" type="Function">
+                                                                    <param id="0" name="Expression">&quot;StartAttack&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
                                             </sub-events>
                                         </event-block>
@@ -3322,10 +3372,6 @@
                                             <actions>
                                                 <action id="-16" name="Set opacity" sid="721406370448994" type="TargetChoice2">
                                                     <param id="0" name="Opacity">TargetChoice2.Opacity - dt*250 * fademod</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="241427598758379" type="TargetChoice2">
-                                                    <param id="0" name="Instance variable">Stopped</param>
-                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -3847,13 +3893,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="868895509785062">
+                <event-block any="1" sid="868895509785062">
                     <conditions>
                         <condition id="4" name="On finished" sid="384887810090586" type="Strike2">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                         </condition>
-                        <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="182275367549423" type="TargetChoice3">
-                            <param id="0" name="Instance variable">Stopped</param>
+                        <condition id="3" name="Compare frame" sid="907367138181934" type="Strike2">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">11</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -3861,6 +3908,11 @@
                         <action id="-9" name="Set value" sid="210388572177157" type="System">
                             <param id="0" name="Variable">UndyneLastHP</param>
                             <param id="1" name="Value">UndyneHP</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="461104454472812" type="Camera">
+                            <param id="0" name="Magnitude">7.5</param>
+                            <param id="1" name="Duration">0.333</param>
+                            <param id="2" name="Mode">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="679827499236482" type="System">
                             <param id="0" name="Variable">UndyneHP</param>
