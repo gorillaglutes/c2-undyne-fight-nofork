@@ -117,6 +117,16 @@
                             <param id="1" name="Value">&quot;undyne_reverse2&quot;</param>
                             <param id="2" name="Axis">0</param>
                         </action>
+                        <action id="5" name="Push" sid="818708258455937" type="AttackLoader">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;undyne_reverse3&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="856608467545698" type="AttackLoader">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">&quot;undyne_reverse4&quot;</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
                         <action id="5" name="Push" sid="9777307155362394" type="AttackLoader">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">&quot;undyne_rotatingspears&quot;</param>

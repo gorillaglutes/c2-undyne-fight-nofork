@@ -1591,6 +1591,138 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TArrowR" sid="296430823359842">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="785522460176905" speed="5">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RightArrow.png">
+                            <collision-poly>
+                                <point x="0.25926" y="0.2" />
+                                <point x="0.555556" y="0.0666672" />
+                                <point x="0.814815" y="0.266667" />
+                                <point x="0.888889" y="0.6" />
+                                <point x="0.777778" y="0.866667" />
+                                <point x="0.555556" y="0.933333" />
+                                <point x="0.370371" y="0.8" />
+                                <point x="0.037037" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="954223741231193" speed="5">
+                        <frame duration="1" hotspotX="0.555556" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedRightArrow.png">
+                            <collision-poly>
+                                <point x="0.25926" y="0.2" />
+                                <point x="0.555556" y="0.0666672" />
+                                <point x="0.814815" y="0.266667" />
+                                <point x="0.888889" y="0.6" />
+                                <point x="0.777778" y="0.866667" />
+                                <point x="0.555556" y="0.933333" />
+                                <point x="0.370371" y="0.8" />
+                                <point x="0.037037" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TArrowL" sid="312670241382070">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="702723241339288" speed="5">
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\LeftArrow.png">
+                            <collision-poly>
+                                <point x="0.185185" y="0.2" />
+                                <point x="0.444444" y="0.0666672" />
+                                <point x="0.740741" y="0.2" />
+                                <point x="0.962963" y="0.6" />
+                                <point x="0.62963" y="0.8" />
+                                <point x="0.444444" y="0.933333" />
+                                <point x="0.259259" y="0.866667" />
+                                <point x="0.111111" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="109189744504072" speed="5">
+                        <frame duration="1" hotspotX="0.481481" hotspotY="0.6" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedLeftArrow.png">
+                            <collision-poly>
+                                <point x="0.185185" y="0.2" />
+                                <point x="0.444444" y="0.0666672" />
+                                <point x="0.740741" y="0.2" />
+                                <point x="0.962963" y="0.6" />
+                                <point x="0.62963" y="0.8" />
+                                <point x="0.444444" y="0.933333" />
+                                <point x="0.259259" y="0.866667" />
+                                <point x="0.111111" y="0.6" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TArrowD" sid="821634955310226">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="976615313663089" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.592593" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\DownArrow.png">
+                            <collision-poly>
+                                <point x="0.200001" y="0.296296" />
+                                <point x="0.533333" y="0.037037" />
+                                <point x="0.8" y="0.333334" />
+                                <point x="0.933333" y="0.592593" />
+                                <point x="0.733333" y="0.814815" />
+                                <point x="0.533333" y="0.925926" />
+                                <point x="0.266666" y="0.851852" />
+                                <point x="0.0666661" y="0.592593" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="388643390872387" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.592593" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedDownArrow.png">
+                            <collision-poly>
+                                <point x="0.200001" y="0.296296" />
+                                <point x="0.533333" y="0.037037" />
+                                <point x="0.8" y="0.333334" />
+                                <point x="0.933333" y="0.592593" />
+                                <point x="0.733333" y="0.814815" />
+                                <point x="0.533333" y="0.925926" />
+                                <point x="0.266666" y="0.851852" />
+                                <point x="0.0666661" y="0.592593" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TArrowU" sid="500252292520930">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="139910804606674" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.481481" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\ArrowU.png">
+                            <collision-poly>
+                                <point x="0.133333" y="0.222222" />
+                                <point x="0.533333" y="0.0740741" />
+                                <point x="0.866666" y="0.259259" />
+                                <point x="0.8" y="0.481481" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0.533333" y="0.962963" />
+                                <point x="0.200001" y="0.703703" />
+                                <point x="0.200001" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Red" pingpong="0" repeatcount="1" repeatto="0" sid="823472182932651" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.481481" original-source="C:\Users\Sid\undyne-construct-2\Assets\Spritesheets\RedUpArrow.png">
+                            <collision-poly>
+                                <point x="0.133333" y="0.222222" />
+                                <point x="0.533333" y="0.0740741" />
+                                <point x="0.866666" y="0.259259" />
+                                <point x="0.8" y="0.481481" />
+                                <point x="0.8" y="0.666667" />
+                                <point x="0.533333" y="0.962963" />
+                                <point x="0.200001" y="0.703703" />
+                                <point x="0.200001" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Timeline">
             <object-type global="1" name="TLActionList" sid="456555951765879">
@@ -2395,6 +2527,21 @@
                 <member>SpinningSpear</member>
             </members>
         </family>
+        <family name="TArrow" plugin-id="Sprite" sid="286247292437260">
+            <members>
+                <member>TArrowD</member>
+                <member>TArrowL</member>
+                <member>TArrowR</member>
+                <member>TArrowU</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="TimeToCenter" sid="259070533189033" type="number" />
+                <instance-variable name="TimeMarker" sid="576626490418814" type="number" />
+                <instance-variable name="StartLocX" sid="470662111304348" type="number" />
+                <instance-variable name="StartLocY" sid="169471974926263" type="number" />
+                <instance-variable name="Direction" sid="816842445283427" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>BattleScreen.xml</layout>
@@ -2506,5 +2653,7 @@
         <file name="sans_final.csv" />
         <file name="undyne_rotatingspears2.csv" />
         <file name="undyne_reverse2.csv" />
+        <file name="undyne_reverse3.csv" />
+        <file name="undyne_reverse4.csv" />
     </files-folder>
 </c2project>

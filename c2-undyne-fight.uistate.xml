@@ -21,6 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="8">Menus</event-sheet>
         <event-sheet order="9">Fonts</event-sheet>
         <event-sheet order="10">MainMenu</event-sheet>
+        <event-sheet order="12">Items</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -41,6 +42,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <family expanded="1" name="RArrowSprite" />
         <family expanded="1" name="TargetChoice" />
         <family expanded="1" name="SpinningSpearFamily" />
+        <family expanded="1" name="TArrow" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
@@ -94,6 +96,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/RArrowU/" />
         <folder expanded="1" path="animation-folder/RArrowR/" />
         <folder expanded="1" path="animation-folder/RArrowL/" />
+        <folder expanded="1" path="animation-folder/TArrowR/" />
+        <folder expanded="1" path="animation-folder/TArrowL/" />
+        <folder expanded="1" path="animation-folder/TArrowD/" />
+        <folder expanded="1" path="animation-folder/TArrowU/" />
         <folder expanded="1" path="animation-folder/TouchA/" />
         <folder expanded="1" path="animation-folder/TouchB/" />
         <folder expanded="1" path="animation-folder/TouchDPad/" />

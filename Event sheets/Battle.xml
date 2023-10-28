@@ -27,6 +27,16 @@
                             <param id="1" name="Value">0</param>
                             <param id="2" name="Axis">0</param>
                         </action>
+                        <action id="5" name="Push" sid="314602163128591" type="PlayerItems">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="930712158059535" type="PlayerItems">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">0</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
                         <action id="5" name="Push" sid="7288109683993914" type="PlayerItems">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">1</param>
@@ -52,12 +62,12 @@
                             <param id="1" name="Value">3</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action id="5" name="Push" sid="6875653235496314" type="PlayerItems">
+                        <action disabled="1" id="5" name="Push" sid="6875653235496314" type="PlayerItems">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">3</param>
                             <param id="2" name="Axis">0</param>
                         </action>
-                        <action id="5" name="Push" sid="9651685953078992" type="PlayerItems">
+                        <action disabled="1" id="5" name="Push" sid="9651685953078992" type="PlayerItems">
                             <param id="0" name="Where">0</param>
                             <param id="1" name="Value">3</param>
                             <param id="2" name="Axis">0</param>
@@ -821,7 +831,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="505250338900195" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_bonegap2&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_reverse3&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="3480072015931767" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -841,7 +851,7 @@
                                             <actions>
                                                 <action id="0" name="Call function" sid="3377623375632616" type="Function">
                                                     <param id="0" name="Name">&quot;RunAttack&quot;</param>
-                                                    <param id="1" name="Parameter {n}">&quot;sans_platformblasterfast&quot;</param>
+                                                    <param id="1" name="Parameter {n}">&quot;undyne_reverse4&quot;</param>
                                                 </action>
                                                 <action id="-11" name="Add to" sid="8071696133224881" type="UndyneLegs">
                                                     <param id="0" name="Instance variable">NextAttack</param>
@@ -6509,7 +6519,7 @@
                 <variable constant="1" name="FREQMOD" sid="537864387734228" static="0" type="number">400</variable>
                 <variable constant="1" name="AMPMOD" sid="916754361678809" static="0" type="number">11.5</variable>
                 <variable constant="1" name="MAXLIFE" sid="685293532534871" static="0" type="number">5</variable>
-                <variable constant="1" name="OPMOD" sid="104016717629225" static="0" type="number">2.5</variable>
+                <variable constant="1" name="OPMOD" sid="104016717629225" static="0" type="number">150</variable>
                 <variable constant="1" name="DTOffset" sid="417474945224670" static="0" type="number">60</variable>
                 <variable constant="0" name="finalTime" sid="301502501926585" static="0" type="number">0.1</variable>
                 <variable constant="0" name="InitialReverseDistance" sid="218878974819584" static="0" type="number">50</variable>
@@ -6723,6 +6733,250 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                         <action disabled="1" id="14" name="Log" sid="496446097802266" type="Browser">
+                                            <param id="0" name="Type">0</param>
+                                            <param id="1" name="Message">time - ArrowSprite.TimeMarker</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="391857763374493" title="TArrow">
+                    <sub-events>
+                        <event-group description="" sid="112478635667177" title="TArrowR">
+                            <sub-events>
+                                <event-block sid="263760006650802">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="562771213020494" type="Function">
+                                            <param id="0" name="Name">&quot;TArrowR&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="426524797320687" type="System">
+                                            <param id="0" name="Object to create">TArrowR</param>
+                                            <param id="1" name="Layer">&quot;CombatZone&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="651979973290289" type="TArrowR">
+                                            <param id="0" name="X">RStartLoc.X</param>
+                                            <param id="1" name="Y">RStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="660473681684670" type="TArrowR">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">DIRECTION_RIGHT</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="306409881169090" type="TArrowR">
+                                            <param id="0" name="Instance variable">StartLocX</param>
+                                            <param id="1" name="Value">RStartLoc.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="770553598912925" type="TArrowR">
+                                            <param id="0" name="Instance variable">StartLocY</param>
+                                            <param id="1" name="Value">RStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="156934485934068" type="TArrowR">
+                                            <param id="0" name="Instance variable">TimeToCenter</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="930141094141945" type="TArrowR">
+                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="114707944663911" type="TArrowR">
+                                            <param id="0" name="Layer">&quot;AttacksOverOpacity&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="236955686232088" title="TArrowL">
+                            <sub-events>
+                                <event-block sid="695122547033780">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="727257283474949" type="Function">
+                                            <param id="0" name="Name">&quot;TArrowL&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="179792933254292" type="System">
+                                            <param id="0" name="Object to create">TArrowL</param>
+                                            <param id="1" name="Layer">&quot;CombatZone&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="602913686307261" type="TArrowL">
+                                            <param id="0" name="X">RStartLoc.X</param>
+                                            <param id="1" name="Y">RStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="370759790917959" type="TArrowL">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">DIRECTION_LEFT</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="802597718984165" type="TArrowL">
+                                            <param id="0" name="Instance variable">StartLocX</param>
+                                            <param id="1" name="Value">LStartLoc.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="836841579185250" type="TArrowL">
+                                            <param id="0" name="Instance variable">StartLocY</param>
+                                            <param id="1" name="Value">LStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="709569840941420" type="TArrowL">
+                                            <param id="0" name="Instance variable">TimeToCenter</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="926252643836504" type="TArrowL">
+                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="442290523212837" type="TArrowL">
+                                            <param id="0" name="Layer">&quot;AttacksOverOpacity&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="148992463774953" title="TArrowU">
+                            <sub-events>
+                                <event-block sid="381425797808077">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="272576009070294" type="Function">
+                                            <param id="0" name="Name">&quot;TArrowU&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="876768959241515" type="System">
+                                            <param id="0" name="Object to create">TArrowU</param>
+                                            <param id="1" name="Layer">&quot;CombatZone&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="496384001868597" type="TArrowU">
+                                            <param id="0" name="X">UStartLoc.X</param>
+                                            <param id="1" name="Y">UStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="305676591631267" type="TArrowU">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">DIRECTION_UP</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="311129000440505" type="TArrowU">
+                                            <param id="0" name="Instance variable">StartLocX</param>
+                                            <param id="1" name="Value">UStartLoc.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="299080361027478" type="TArrowU">
+                                            <param id="0" name="Instance variable">StartLocY</param>
+                                            <param id="1" name="Value">UStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="722093140131614" type="TArrowU">
+                                            <param id="0" name="Instance variable">TimeToCenter</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="467079991127098" type="TArrowU">
+                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="273904194442186" type="TArrowU">
+                                            <param id="0" name="Layer">&quot;AttacksOverOpacity&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-group description="" sid="332216817616175" title="TArrowD">
+                            <sub-events>
+                                <event-block sid="822446101877126">
+                                    <conditions>
+                                        <condition id="0" name="On function" sid="242224333531245" type="Function">
+                                            <param id="0" name="Name">&quot;TArrowD&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="151061763962909" type="System">
+                                            <param id="0" name="Object to create">TArrowD</param>
+                                            <param id="1" name="Layer">&quot;CombatZone&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="689262252352889" type="TArrowD">
+                                            <param id="0" name="X">DStartLoc.X</param>
+                                            <param id="1" name="Y">DStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="467767184935724" type="TArrowD">
+                                            <param id="0" name="Instance variable">Direction</param>
+                                            <param id="1" name="Value">DIRECTION_DOWN</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="400632997129524" type="TArrowD">
+                                            <param id="0" name="Instance variable">StartLocX</param>
+                                            <param id="1" name="Value">DStartLoc.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="843423844347558" type="TArrowD">
+                                            <param id="0" name="Instance variable">StartLocY</param>
+                                            <param id="1" name="Value">DStartLoc.Y</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="343239056412044" type="TArrowD">
+                                            <param id="0" name="Instance variable">TimeToCenter</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="753257892917908" type="TArrowD">
+                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="-26" name="Move to layer" sid="830478241780925" type="TArrowD">
+                                            <param id="0" name="Layer">&quot;AttacksOverOpacity&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="822891878273935">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="191704512645026" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="855349201206432" type="TArrow">
+                                    <param id="0" name="X">TArrow.StartLocX + cos(Tarrow.Direction * 90) * ((time-TArrow.TimeMarker)/TArrow.TimeToCenter) * abs(Tarrow.StartLocX - PlayerHitbox.X)</param>
+                                    <param id="1" name="Y">TArrow.StartLocY + sin(Tarrow.Direction * 90) * ((time-Tarrow.TimeMarker)/TArrow.TimeToCenter) * abs(TArrow.StartLocY - PlayerHitbox.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="731499216308598">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="474965461731092" type="System">
+                                            <param id="0" name="Variable">LastBlock</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">time-REMAININGREDTIMER</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="971828968252659" type="Blocker">
+                                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="771321293614791">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="627846203242884" type="Blocker">
+                                            <param id="0" name="Object">TArrow</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="720170797130013" type="TArrow" />
+                                        <action id="0" name="Play" sid="925090649219529" type="Audio">
+                                            <param id="0" name="Audio file">Ding</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="758585194143362" type="System">
+                                            <param id="0" name="Variable">LastBlock</param>
+                                            <param id="1" name="Value">time</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="410616195753598" type="Blocker">
+                                            <param id="0" name="Animation">&quot;Red&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action disabled="1" id="14" name="Log" sid="950414262877190" type="Browser">
                                             <param id="0" name="Type">0</param>
                                             <param id="1" name="Message">time - ArrowSprite.TimeMarker</param>
                                         </action>
@@ -7586,6 +7840,61 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="774794307416356">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="845934522707690" type="ArrowSprite">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Opacity">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="910201500664388" type="ArrowSprite">
+                                            <param id="0" name="Opacity">ArrowSprite.Opacity +dt * OPMOD</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="268276855596524">
+                            <conditions>
+                                <condition id="-19" name="Pick all" sid="440762023146623" type="System">
+                                    <param id="0" name="Object">TArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="311109834967985" type="TArrow">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="874279372882950">
+                                    <conditions>
+                                        <condition id="-10" name="Compare opacity" sid="832526713913413" type="TArrow">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="Opacity">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="879881384846515" type="TArrow">
+                                            <param id="0" name="Opacity">TArrow.Opacity + dt * OPMOD</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="867476879016899">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="589687316034355" type="TArrow">
+                                            <param id="0" name="Instance variable">TimeMarker</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">time - TArrow.TimeToCenter</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="394730443057225" type="TArrow" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="848099234571199">
                             <conditions>
@@ -7602,16 +7911,18 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="774794307416356">
+                        <event-block sid="231570311258555">
                             <conditions>
-                                <condition id="-10" name="Compare opacity" sid="845934522707690" type="ArrowSprite">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="Opacity">100</param>
+                                <condition id="-15" name="Pick nearest/furthest" sid="871602523414875" type="TArrow">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="X">PlayerHitbox.X</param>
+                                    <param id="2" name="Y">PlayerHitbox.Y</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="910201500664388" type="ArrowSprite">
-                                    <param id="0" name="Opacity">ArrowSprite.Opacity + cos(dt) * OPMOD</param>
+                                <action id="4" name="Set animation" sid="965947946317672" type="TArrow">
+                                    <param id="0" name="Animation">&quot;Red&quot;</param>
+                                    <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -7624,7 +7935,7 @@
                             </conditions>
                             <actions>
                                 <action id="-16" name="Set opacity" sid="480652793520316" type="RArrowSprite">
-                                    <param id="0" name="Opacity">RArrowSprite.Opacity + cos(dt) * OPMOD</param>
+                                    <param id="0" name="Opacity">RArrowSprite.Opacity + dt * OPMOD</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -13010,6 +13321,23 @@
                                 <action id="-9" name="Destroy" sid="652642678954240" type="ArrowSprite" />
                             </actions>
                         </event-block>
+                        <event-block sid="653544909408642">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="391031413396182" type="PlayerHitbox">
+                                    <param id="0" name="Object">TArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-15" name="Set visible" sid="814880503104060" type="TArrow">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="601978088858847" type="Function">
+                                    <param id="0" name="Name">&quot;DamagePlayer&quot;</param>
+                                    <param id="1" name="Parameter {n}">floor(random(8,13)){###}0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="683168316189897" type="TArrow" />
+                            </actions>
+                        </event-block>
                         <event-block sid="816484137405095">
                             <conditions>
                                 <condition id="1" name="Is overlapping another object" sid="992998733694341" type="PlayerHitbox">
@@ -13771,6 +14099,76 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="983104761109262">
+                    <conditions>
+                        <condition id="0" name="On function" sid="859734789744571" type="Function">
+                            <param id="0" name="Name">&quot;ClearAttacks&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="773306962638559">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="191191251808727" type="System">
+                                    <param id="0" name="Object">ArrowSprite</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="132341022431933" type="ArrowSprite" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="485433086390255">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="981462414234746" type="System">
+                                    <param id="0" name="Object">TArrow</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="897025535787083" type="TArrow" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="365679004275716">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="971670496607523" type="System">
+                                    <param id="0" name="Object">RArrowSprite</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="399005026444434" type="RArrowSprite" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="101156930009319">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="315533078781082" type="System">
+                                    <param id="0" name="Object">RotatingSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="401277624877430" type="RotatingSpear" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="208351201015557">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="929719195620237" type="System">
+                                    <param id="0" name="Object">SpinningSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="122688423745656" type="SpinningSpear" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="158085322004685">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="746823055350817" type="System">
+                                    <param id="0" name="Object">StabbingSpear</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="938151108447187" type="StabbingSpear" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="987148592699869">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="739880776800068" type="System">
@@ -13944,6 +14342,10 @@
                                             <param id="0" name="Effect">&quot;Tint&quot;</param>
                                             <param id="1" name="Parameter index">2</param>
                                             <param id="2" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="536430150856631" type="Function">
+                                            <param id="0" name="Name">&quot;ClearAttacks&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
                                         </action>
                                     </actions>
                                 </event-block>

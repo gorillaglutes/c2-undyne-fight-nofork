@@ -12,11 +12,11 @@
             <actions>
                 <action id="0" name="Call function" sid="3943517466350452" type="Function">
                     <param id="0" name="Name">&quot;RegisterItem&quot;</param>
-                    <param id="1" name="Parameter {n}">0{###}99{###}&quot;Butterscotch Pie&quot;{###}&quot;Pie&quot;</param>
+                    <param id="1" name="Parameter {n}">0{###}45{###}&quot;Snowman Piece&quot;{###}&quot;SnowPiece&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="2866502868054797" type="Function">
                     <param id="0" name="Name">&quot;RegisterItem&quot;</param>
-                    <param id="1" name="Parameter {n}">0{###}90{###}&quot;Instant Noodles&quot;{###}&quot;I.Noodles&quot;</param>
+                    <param id="1" name="Parameter {n}">0{###}34{###}&quot;Quiche&quot;{###}&quot;Quiche&quot;</param>
                 </action>
                 <action id="0" name="Call function" sid="2972695806626813" type="Function">
                     <param id="0" name="Name">&quot;RegisterItem&quot;</param>
