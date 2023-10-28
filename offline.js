@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1698355088,
+	"version": 1698526230,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -151,6 +151,8 @@
 		"sans_multi3.csv",
 		"sans_final.csv",
 		"undyne_rotatingspears2.csv",
-		"undyne_reverse2.csv"
+		"undyne_reverse2.csv",
+		"undyne_reverse3.csv",
+		"undyne_reverse4.csv"
 	]
 }
